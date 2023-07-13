@@ -1,5 +1,7 @@
 package utils;
-
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,14 +24,14 @@ public static List<Map<String,String>> readData(String sheetName, String path){
         Sheet sheet=xssfWorkbook.getSheet(sheetName);
         Row headerRow=sheet.getRow(0);
 
-        for(int rows=1; rows<row.getPhysicalNumberOfRows(); rows++){
+        for (int rows = 1; rows < sheet.getPhysicalNumberOfRows(); rows++) {
 
             Row row=sheet.getRow(rows);
 
             Map<String, String> rowMap=new HashMap<>();
-            for(int col=0; col<row.getPhysicalNumberOfCell(); col++){
-                String key=headerRow.getCell(col);toString();
-                String value=row.getCell(col);toString();
+            for(int col=0; col<row.getPhysicalNumberOfCells(); col++){
+                String key=headerRow.getCell(col).toString();
+                String value=row.getCell(col).toString();
                 rowMap.put(key, value);
 
             }
