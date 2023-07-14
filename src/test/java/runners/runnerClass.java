@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/",
         glue = "steps",
-        dryRun = false,
+        dryRun = true,
         tags = "@login",
         monochrome = true,
         plugin = {"pretty","html:target/cucumber.html","json:target/cucumber.json",

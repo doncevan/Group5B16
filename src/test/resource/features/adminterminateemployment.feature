@@ -1,12 +1,13 @@
 Feature: Admin terminates employment
 
   Background:
-      Given: user is navigated to HRMS application
+      Given user is navigated to HRMS application
 
+    @admin
     Scenario Outline: admin can terminate employee by username
-      And: admin navigates to admin user management page
-      When: admin enters "<username>" and searches employee
-      And: admin checks username checkbox and deletes employee record
+      And admin navigates to admin user management page
+      When admin enters "<username>" and searches employee
+      And admin checks username checkbox and deletes employee record
 
       Examples:
       |username      |
