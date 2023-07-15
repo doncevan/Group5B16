@@ -7,7 +7,7 @@ Feature: Admin terminates employment
     Scenario Outline: admin can terminate employee by username
       And admin navigates to admin user management page
       When admin enters "<username>" and searches employee
-      Then admin checks username checkbox and deletes employee record
+      Then admin checks "<username>" checkbox and deletes employee record
 
       Examples:
       |username      |
