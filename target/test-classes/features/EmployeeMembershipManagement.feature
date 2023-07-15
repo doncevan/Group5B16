@@ -11,7 +11,7 @@ Feature: Employee Membership Management
     Then the employee is successfully logged in the application
     When the employee clicks on My Info tab
     And the employee clicks Memberships option
-  @add
+  @membership
   Scenario Outline: Display and add membership details
     And the employee clicks Add button
     And the employee enters "<Membership>" and "<SubscriptionPaidBy>" and "<SubscriptionAmount>" and "<Currency>" and "<SubscriptionCommenceDate>" and "<SubscriptionRenewalDate>" in data driven format
@@ -22,7 +22,7 @@ Feature: Employee Membership Management
       | Membership | SubscriptionPaidBy | SubscriptionAmount | Currency             | SubscriptionCommenceDate | SubscriptionRenewalDate |
       | Home Depot | Company              | 50                  | United States Dollar | 2023-07-15                 | 2024-07-15                |
 
-  @edit
+  @membership
   Scenario Outline: Edit previously saved membership details
     Given the employee has previously saved membership details
     When the employee clicks on specific membership account
@@ -33,7 +33,7 @@ Feature: Employee Membership Management
       | Membership | SubscriptionPaidBy | SubscriptionAmount | Currency             | SubscriptionCommenceDate | SubscriptionRenewalDate |
       | Amazon     | Individual           | 150                 | United States Dollar | 2023-08-10                 | 2024-08-10                |
 
-  @delete
+  @membership
   Scenario: Delete previously saved membership details
     Given the employee has previously saved membership details
     When the employee clicks on checkbox
