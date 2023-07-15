@@ -8,13 +8,10 @@ import utils.CommonMethods;
 public class PicturePage extends CommonMethods {
     @FindBy(xpath = "//*[@id='txtUsername']")
     public WebElement usernameField;
-
     @FindBy(id = "txtPassword")
     public WebElement passwordField;
-
     @FindBy(id = "btnLogin")
     public WebElement loginButton;
-
     @FindBy(id = "menu_pim_viewMyDetails")
     public WebElement myInfo;
     @FindBy(xpath = "//img[@alt='Employee Photo']")
