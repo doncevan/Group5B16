@@ -4,6 +4,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.testng.asserts.SoftAssert;
 import utils.CommonMethods;
 import utils.ConfigReader;
 
@@ -44,5 +46,6 @@ public class uploadProfilePicture extends CommonMethods {
         sendText(essUserName, loginPage.usernameField);
         sendText(essPassWord, loginPage.passwordField);
         click(loginPage.loginButton);
+
     }
 }

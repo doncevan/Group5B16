@@ -20,6 +20,8 @@ public class PicturePage extends CommonMethods {
     public WebElement uploadPhoto;
     @FindBy(xpath = "//input[@id='btnSave']")
     public WebElement btnSave;
+    @FindBy(id = "welcome")
+    public WebElement welcome;
 
     public PicturePage() {
         PageFactory.initElements(driver, this);
