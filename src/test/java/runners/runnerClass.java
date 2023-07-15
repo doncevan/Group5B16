@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/",
         glue = "steps",
         dryRun = true,
-        tags = "@admin",
+        tags = "@add",
         monochrome = true,
         plugin = {"pretty","html:target/cucumber.html","json:target/cucumber.json",
                 "rerun:target/failed.txt"}
