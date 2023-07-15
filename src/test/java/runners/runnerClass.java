@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 
         tags = "@adminLogin",
         monochrome = false,
-        
+
         plugin = {"pretty","html:target/cucumber.html","json:target/cucumber.json",
                 "rerun:target/failed.txt"}
 )
