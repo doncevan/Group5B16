@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/",
         glue = "steps",
-        dryRun = false,
-        tags = "@admin",
+        dryRun =false,
+        tags = "",
         monochrome = true,
-        plugin = {"pretty","html:target/cucumber.html","json:target/cucumber.json",
-                "rerun:target/failed.txt"}
+        plugin = {"pretty",}
+
 )
 
 
