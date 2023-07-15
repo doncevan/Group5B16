@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
         <module name="GroupProjectB16" />
+=======
+        <module name="Group5B16" />
+>>>>>>> 896176ca21ab0b84634090bdf459c9d8147de80c
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Group5B16" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
