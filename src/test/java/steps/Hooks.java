@@ -11,7 +11,8 @@ public class Hooks extends CommonMethods {
         openBrowserAndNavigateToURL();
     }
     @After
-    public void end(Scenario scenario){
+    public void end(Scenario scenario) throws InterruptedException {
+        Thread.sleep(5000);
         byte[] pic;
         if(scenario.isFailed()) {
             pic = takeScreenshot("failed/" + scenario.getName());
