@@ -23,7 +23,7 @@ public class TerminateEmployeeScenario extends CommonMethods{
 
     @And("admin navigates to admin user management page")
     public void adminNavigatesToAdminUserManagementPage() {
-        
+
     }
 
     @When("admin enters {string} and searches employee")
