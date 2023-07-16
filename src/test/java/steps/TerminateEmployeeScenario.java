@@ -32,8 +32,10 @@ public class TerminateEmployeeScenario extends CommonMethods {
 
     @And("admin navigates to admin user management page")
     public void adminNavigatesToAdminUserManagementPage() {
+
        //navigate to admin user management page
        CommonMethods.click(dashboardPage.adminDashboardBtn);
+
     }
 
     @When("admin enters {string} and searches employee")
