@@ -1,19 +1,15 @@
 package steps;
 
-import Pages.AdminUserManagementPage;
-import Pages.DashboardPage;
-import Pages.EmployeeMembershipManagementPage;
-import Pages.LoginPage;
-import Pages.PicturePage;
+import Pages.*;
 
 public class PageInitializer {
     public static LoginPage loginPage;
     public static DashboardPage dashboardPage;
 
-
     public static EmployeeMembershipManagementPage employeeMembershipManagementPage;
     public static PicturePage picturePage;
     public static AdminUserManagementPage adminUMPage;
+    public static AdminQualificationMembershipPage adminMemPage;
 
 
     public static void initializePageObjects() {
@@ -22,6 +18,6 @@ public class PageInitializer {
         employeeMembershipManagementPage = new EmployeeMembershipManagementPage();
         picturePage = new PicturePage();
         adminUMPage = new AdminUserManagementPage();
-
+        adminMemPage = new AdminQualificationMembershipPage();
     }
 }

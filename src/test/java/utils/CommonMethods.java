@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.List;
 
 public class CommonMethods extends PageInitializer {
 
@@ -106,6 +107,17 @@ public class CommonMethods extends PageInitializer {
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
         //this line returns the formated data
         return sdf.format(date);
+    }
+
+    public static String validateStringInsideWebTableOrColumn(String expectedString, List<WebElement> webList){
+         String actualString = "";
+       for(WebElement strings : webList){
+           String string =  strings.getText();
+           if(string.equals(expectedString)){
+               return string;
+           } else{ continue; }
+       }
+       return actualString;
     }
 
 
