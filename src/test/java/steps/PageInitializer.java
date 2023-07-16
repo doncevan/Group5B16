@@ -2,7 +2,7 @@ package steps;
 
 import Pages.AdminUserManagementPage;
 import Pages.DashboardPage;
-import Pages.EmployeeMembershipManagementPage;
+import Pages.EmployeeDetailsManagementPage;
 import Pages.LoginPage;
 import Pages.PicturePage;
 
@@ -11,7 +11,7 @@ public class PageInitializer {
     public static DashboardPage dashboardPage;
 
 
-    public static EmployeeMembershipManagementPage employeeMembershipManagementPage;
+    public static EmployeeDetailsManagementPage employeeDetailsManagementPage;
     public static PicturePage picturePage;
     public static AdminUserManagementPage adminUMPage;
 
@@ -19,7 +19,7 @@ public class PageInitializer {
     public static void initializePageObjects() {
         loginPage = new LoginPage();
         dashboardPage = new DashboardPage();
-        employeeMembershipManagementPage = new EmployeeMembershipManagementPage();
+        employeeDetailsManagementPage = new EmployeeDetailsManagementPage();
         picturePage = new PicturePage();
         adminUMPage = new AdminUserManagementPage();
 

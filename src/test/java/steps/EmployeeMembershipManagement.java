@@ -13,15 +13,14 @@ import utils.Log;
 public class EmployeeMembershipManagement extends CommonMethods {
     @Given("the employee is navigated to HRMS application")
     public void theEmployeeIsNavigatedToHRMSApplication() {
-        openBrowserAndNavigateToURL();
     }
 
     @When("the employee enters valid ess username and password")
     public void theEmployeeEntersValidEssUsernameAndPassword() {
         DOMConfigurator.configure("log4j.xml");
-        Log.startTestCase("My batch 16 test case starts here");
+        Log.startTestCase("My employee membership management test case starts here");
         sendText(ConfigReader.getPropertyValue("essusername"), loginPage.usernameField);
-        Log.info("my username has been entered");
+        Log.info("My username has been entered");
         sendText(ConfigReader.getPropertyValue("esspassword"), loginPage.passwordField);
         Log.info("My password has been entered");
     }
@@ -33,51 +32,50 @@ public class EmployeeMembershipManagement extends CommonMethods {
 
     @Then("the employee is successfully logged in the application")
     public void theEmployeeIsSuccessfullyLoggedInTheApplication() {
-        System.out.println("the employee logged in");
+        System.out.println("The employee logged in");
     }
 
     @When("the employee clicks on My Info tab")
     public void theEmployeeClicksOnMyInfoTab() {
-        click(employeeMembershipManagementPage.myInfoTab);
+        click(employeeDetailsManagementPage.myInfoTab);
     }
 
     @And("the employee clicks Memberships option")
     public void theEmployeeClicksMembershipsOption() {
-        click(employeeMembershipManagementPage.membershipsOption);
+        click(employeeDetailsManagementPage.membershipsOption);
     }
 
     @And("the employee clicks Add button")
     public void theEmployeeClicksAddButton() {
-        click(employeeMembershipManagementPage.addButton);
+        click(employeeDetailsManagementPage.addButton);
     }
 
     @And("the employee enters {string} and {string} and {string} and {string} and {string} and {string} in data driven format")
     public void theEmployeeEntersAndAndAndAndAndInDataDrivenFormat
             (String Membership, String SubscriptionPaidBy, String SubscriptionAmount, String Currency, String SubscriptionCommenceDate, String SubscriptionRenewalDate) {
 
-        Select membershipSelect = new Select(employeeMembershipManagementPage.membershipDropdown);
+        Select membershipSelect = new Select(employeeDetailsManagementPage.membershipDropdown);
         membershipSelect.selectByVisibleText(Membership);
 
-        Select subscriptionPaidBySelect = new Select(employeeMembershipManagementPage.subscriptionPaidByDropdown);
+        Select subscriptionPaidBySelect = new Select(employeeDetailsManagementPage.subscriptionPaidByDropdown);
         subscriptionPaidBySelect.selectByVisibleText(SubscriptionPaidBy);
 
-        sendText(SubscriptionAmount, employeeMembershipManagementPage.subscriptionAmountField);
+        sendText(SubscriptionAmount, employeeDetailsManagementPage.subscriptionAmountField);
 
-        Select currencySelect = new Select(employeeMembershipManagementPage.currencyDropdown);
+        Select currencySelect = new Select(employeeDetailsManagementPage.currencyDropdown);
         currencySelect.selectByVisibleText(Currency);
 
-        click(employeeMembershipManagementPage.renewalDateField);
-        sendText(SubscriptionRenewalDate, employeeMembershipManagementPage.renewalDateField);
-        click(employeeMembershipManagementPage.commenceDateField);
-        sendText(SubscriptionCommenceDate, employeeMembershipManagementPage.commenceDateField);
+        click(employeeDetailsManagementPage.renewalDateField);
+        sendText(SubscriptionRenewalDate, employeeDetailsManagementPage.renewalDateField);
+        click(employeeDetailsManagementPage.commenceDateField);
+        sendText(SubscriptionCommenceDate, employeeDetailsManagementPage.commenceDateField);
 
 
     }
 
     @And("the employee clicks the save button")
-    public void theEmployeeClicksTheSaveButton() throws InterruptedException {
-        //Thread.sleep(2000);
-        click(employeeMembershipManagementPage.saveButton);
+    public void theEmployeeClicksTheSaveButton() {
+        click(employeeDetailsManagementPage.saveButton);
     }
 
 
@@ -98,29 +96,28 @@ public class EmployeeMembershipManagement extends CommonMethods {
 
     @When("the employee clicks on specific membership account")
     public void theEmployeeClicksOnSpecificMembershipAccount() {
-        click(employeeMembershipManagementPage.pickAccount);
+        click(employeeDetailsManagementPage.pickAccount);
     }
 
     @And("the employee edits {string} and {string} and {string} and {string} and {string} and {string} in data driven format")
     public void theEmployeeEditsAndAndAndAndAndInDataDrivenFormat
             (String Membership, String SubscriptionPaidBy, String SubscriptionAmount, String Currency, String SubscriptionCommenceDate, String SubscriptionRenewalDate) {
 
-        Select membershipSelect = new Select(employeeMembershipManagementPage.membershipDropdown);
+        Select membershipSelect = new Select(employeeDetailsManagementPage.membershipDropdown);
         membershipSelect.selectByVisibleText(Membership);
 
-        Select subscriptionPaidBySelect = new Select(employeeMembershipManagementPage.subscriptionPaidByDropdown);
+        Select subscriptionPaidBySelect = new Select(employeeDetailsManagementPage.subscriptionPaidByDropdown);
         subscriptionPaidBySelect.selectByVisibleText(SubscriptionPaidBy);
 
-        sendText(SubscriptionAmount, employeeMembershipManagementPage.subscriptionAmountField);
+        sendText(SubscriptionAmount, employeeDetailsManagementPage.subscriptionAmountField);
 
-        Select currencySelect = new Select(employeeMembershipManagementPage.currencyDropdown);
+        Select currencySelect = new Select(employeeDetailsManagementPage.currencyDropdown);
         currencySelect.selectByVisibleText(Currency);
 
-        click(employeeMembershipManagementPage.renewalDateField);
-        sendText(SubscriptionRenewalDate, employeeMembershipManagementPage.renewalDateField);
-        click(employeeMembershipManagementPage.commenceDateField);
-        sendText(SubscriptionCommenceDate, employeeMembershipManagementPage.commenceDateField);
-
+        click(employeeDetailsManagementPage.renewalDateField);
+        sendText(SubscriptionRenewalDate, employeeDetailsManagementPage.renewalDateField);
+        click(employeeDetailsManagementPage.commenceDateField);
+        sendText(SubscriptionCommenceDate, employeeDetailsManagementPage.commenceDateField);
     }
 
     @Then("the system should update the employee's membership details")
@@ -128,14 +125,12 @@ public class EmployeeMembershipManagement extends CommonMethods {
     }
 
     @When("the employee clicks on checkbox")
-    public void theEmployeeClicksOnCheckbox() throws InterruptedException {
-        click(employeeMembershipManagementPage.checkBox);
-        Thread.sleep(2000);
+    public void theEmployeeClicksOnCheckbox() { click(employeeDetailsManagementPage.checkBox);
     }
 
     @And("the employee clicks on Delete button")
     public void theEmployeeClicksOnDeleteButton() {
-        click(employeeMembershipManagementPage.deleteButton);
+        click(employeeDetailsManagementPage.deleteButton);
     }
 
     @Then("given membership account has been deleted")

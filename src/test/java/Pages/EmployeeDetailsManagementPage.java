@@ -3,12 +3,37 @@ package Pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import utils.CommonMethods;
 
-public class EmployeeMembershipManagementPage extends CommonMethods {
+public class EmployeeDetailsManagementPage extends CommonMethods {
+
+    @FindBy(id = "personal_txtEmpFirstName")
+    public WebElement firstName;
+
+    @FindBy(id = "personal_txtEmpMiddleName")
+    public WebElement middleName;
+
+    @FindBy(id = "personal_txtEmpLastName")
+    public WebElement lastName;
+
+    @FindBy(id = "personal_optGender_1")
+    public WebElement gender;
+
+    @FindBy(id = "personal_cmbNation")
+    public WebElement nationality;
+
+    @FindBy(id = "personal_cmbMarital")
+    public WebElement maritalStatus;
+
+    @FindBy(id = "btnSave")
+    public WebElement Save;
+
+
     @FindBy(id = "menu_pim_viewMyDetails")
     public WebElement myInfoTab;
+
+    @FindBy(id = "btnSave")
+    public WebElement editButton;
 
     @FindBy(xpath = "//a[normalize-space()='Memberships']")
     public WebElement membershipsOption;
@@ -46,7 +71,7 @@ public class EmployeeMembershipManagementPage extends CommonMethods {
     @FindBy(id = "delMemsBtn")
     public WebElement deleteButton;
 
-    public EmployeeMembershipManagementPage() {
+    public EmployeeDetailsManagementPage() {
         PageFactory.initElements(driver, this);
     }
 }
