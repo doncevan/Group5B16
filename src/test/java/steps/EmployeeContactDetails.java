@@ -5,6 +5,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.log4j.xml.DOMConfigurator;
+import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import utils.CommonMethods;
 import utils.ConfigReader;
 import utils.Log;
@@ -80,6 +82,10 @@ public class EmployeeContactDetails extends CommonMethods {
 
     @Then("employees personal information should be saved")
     public void employeesPersonalInformationShouldBeSaved() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String script = "return document.querySelector('.message.success.fadable').childNodes[0].nodeValue.trim()";
+        String messageText = (String) js.executeScript(script);
+        Assert.assertEquals("Successfully Saved", messageText);
         System.out.println("The employee successfully updated personal information");
     }
 }

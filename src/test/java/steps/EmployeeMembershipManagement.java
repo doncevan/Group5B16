@@ -5,6 +5,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.log4j.xml.DOMConfigurator;
+import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 import utils.CommonMethods;
 import utils.ConfigReader;
@@ -81,6 +83,10 @@ public class EmployeeMembershipManagement extends CommonMethods {
 
     @Then("the system should validate that mandatory fields are filled in")
     public void theSystemShouldValidateThatMandatoryFieldsAreFilledIn() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String script = "return document.querySelector('.message.success.fadable').childNodes[0].nodeValue.trim()";
+        String messageText = (String) js.executeScript(script);
+        Assert.assertEquals("Successfully Saved", messageText);
         System.out.println("Fields are filled in");
     }
 
@@ -122,6 +128,10 @@ public class EmployeeMembershipManagement extends CommonMethods {
 
     @Then("the system should update the employee's membership details")
     public void theSystemShouldUpdateTheEmployeeSMembershipDetails() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String script = "return document.querySelector('.message.success.fadable').childNodes[0].nodeValue.trim()";
+        String messageText = (String) js.executeScript(script);
+        Assert.assertEquals("Successfully Saved", messageText);
     }
 
     @When("the employee clicks on checkbox")
@@ -135,6 +145,10 @@ public class EmployeeMembershipManagement extends CommonMethods {
 
     @Then("given membership account has been deleted")
     public void givenMembershipAccountHasBeenDeleted() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String script = "return document.querySelector('.message.success.fadable').childNodes[0].nodeValue.trim()";
+        String messageText = (String) js.executeScript(script);
+        Assert.assertEquals("Successfully Deleted", messageText);
         System.out.println("Chosen membership account was successfully deleted");
     }
 }
