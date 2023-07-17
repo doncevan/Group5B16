@@ -10,6 +10,7 @@ public class PageInitializer {
     public static PicturePage picturePage;
     public static AdminUserManagementPage adminUMPage;
     public static AdminQualificationMembershipPage adminMemPage;
+    public static ActiveEmployeePage activeEmpPage;
 
 
     public static void initializePageObjects() {
@@ -19,5 +20,7 @@ public class PageInitializer {
         picturePage = new PicturePage();
         adminUMPage = new AdminUserManagementPage();
         adminMemPage = new AdminQualificationMembershipPage();
+        activeEmpPage = new ActiveEmployeePage();
+
     }
 }
