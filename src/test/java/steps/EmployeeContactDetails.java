@@ -36,8 +36,7 @@ public class EmployeeContactDetails extends CommonMethods {
     }
 
     @When("employee clicks on My Info tab")
-    public void employeeClicksOnMyInfoTab() {
-        click(employeeDetailsManagementPage.myInfoTab);
+    public void employeeClicksOnMyInfoTab() { click(employeeDetailsManagementPage.myInfoTab);
     }
 
     @And("employee clicks on Edit button")
