@@ -6,8 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
 public class DashboardPage extends CommonMethods {
-
     public final String expectedPageTitle = "Human Management System";
+
 
     @FindBy(id="menu_pim_viewPimModule")
     public WebElement pimDashboardBtn;
@@ -19,14 +19,12 @@ public class DashboardPage extends CommonMethods {
     @FindBy(id="menu_admin_Qualifications")
     public WebElement adminQualificationBtn;
 
-    @FindBy(id="menu_admin_membership")
-    public WebElement adminQualificationMembershipBtn;
-
-//duplicate webelement
     @FindBy(id="menu_admin_viewAdminModule")
     public WebElement adminDashboardBtn;
 
-//fekadu
+    @FindBy(id="menu_admin_membership")
+    public WebElement adminQualificationMembershipBtn;
+
     @FindBy(id="btnAdd")
     public WebElement addBtn;
     @FindBy(id="language_name")
@@ -35,7 +33,7 @@ public class DashboardPage extends CommonMethods {
     public WebElement saveBtn;
     @FindBy(id="menu_admin_viewLanguages")
     public WebElement languagesBtn;
-//fekadu
+
     public DashboardPage() {
         PageFactory.initElements(driver, this);
     }
