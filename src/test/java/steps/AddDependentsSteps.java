@@ -15,11 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 public class AddDependentsSteps extends CommonMethods {
-    @Given("employee is navigated to HRMS application")
-   public void employee_is_navigated_to_hrms_application() {
-      openBrowserAndNavigateToURL();
 
-    }
     @Given("user is logged into the HRMS system application")
     public void user_is_logged_into_the_hrms_system_application() {
         String adminUserName = ConfigReader.getPropertyValue("adminusername");
