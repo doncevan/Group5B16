@@ -27,8 +27,8 @@ Feature: Employee can manage the dependents in the HRMS application
   Then the HRMS application displays error messages
   When user enters invalid information "<Name>" and "<Relationship>" and "<DateofBirth>" and verifying the "<Error>"
   Examples:
-      | Name         | Relationship | DateofBirth   | Error
-      | Helene       |              | 1990-05-15    | *Required field
+      | Name         | Relationship | DateofBirth   | Error|
+      | Helene       |              | 1990-05-15    | *Required field|
 
 
   @removal
