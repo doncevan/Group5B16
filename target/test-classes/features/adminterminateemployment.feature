@@ -3,7 +3,7 @@ Feature: Admin terminates employment
   Background:
       Given user is navigated to HRMS application
 
-    @admin
+    @admin @Daniel1
     Scenario Outline: admin can terminate employee by username
       And admin navigates to admin user management page
       When admin enters "<username>" and searches employee

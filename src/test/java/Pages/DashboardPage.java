@@ -19,6 +19,9 @@ public class DashboardPage extends CommonMethods {
     @FindBy(id="menu_admin_Qualifications")
     public WebElement adminQualificationBtn;
 
+    @FindBy(id="menu_admin_membership")
+    public WebElement adminQualificationMembershipBtn;
+
 //duplicate webelement
     @FindBy(id="menu_admin_viewAdminModule")
     public WebElement adminDashboardBtn;
