@@ -22,13 +22,19 @@ public class AdminUserManagementPage extends CommonMethods {
     @FindBy(id="btnDelete")
     public WebElement deleteButton;
 
-    @FindBy(id="dialogDeleteBtn")
-    public WebElement deleteRecordsOkButton;
+    @FindBy(xpath="//form[@id='frmEmpJobDetails']//input[@id='btnTerminateEmployement']")
+    public WebElement terminateEmploymentBtn;
 
-    @FindBy(xpath = "//table[@id='resultTable']//tr[1]/td[1]")
-    public WebElement NoRecordsFoundUserTable;
+    @FindBy(xpath="//form[@id='frmEmpJobDetails']//input[@id='btnTerminateEmployement']")
+    public WebElement activateEmploymentBtn;
+    @FindBy(id="dialogConfirm")
+    public WebElement confirmTerminateBtn;
 
-    public final String expectedNoRecordsFound = "No Records Found";
+    @FindBy(xpath = "//form[@id='frmEmpJobDetails']//a[@id='terminateModal']")
+    public WebElement validateTermination;
+
+
+    public final String expectedActivateEmp = "Activate Employment";
 
     public AdminUserManagementPage(){
         PageFactory.initElements(driver, this);

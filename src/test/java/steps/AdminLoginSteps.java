@@ -9,13 +9,13 @@ import utils.ConfigReader;
 import utils.Log;
 
 public class AdminLoginSteps extends CommonMethods {
-    @Given("admin is navigated to the HRMS website")
-    public void adminIsNavigatedToTheHRMSWebsite() {
-        openBrowserAndNavigateToURL();
-    }
+//    @Given("admin is navigated to the HRMS website")
+//    public void adminIsNavigatedToTheHRMSWebsite() throws InterruptedException{
+//        openBrowserAndNavigateToURL();
+//    }
 
     @When("admin enters valid username and password")
-    public void adminEntersValidUsernameAndPassword() {
+    public void adminEntersValidUsernameAndPassword() throws InterruptedException{
         sendText(ConfigReader.getPropertyValue("adminusername"), loginPage.usernameField);
         Log.info("Admin's username has been entered");
         sendText(ConfigReader.getPropertyValue("adminpassword"), loginPage.passwordField);
@@ -29,7 +29,7 @@ public class AdminLoginSteps extends CommonMethods {
     }
 
     @Then("admin is successfuly logged in the application")
-    public void adminIsSuccessfulyLoggedInTheApplication() {
+    public void adminIsSuccessfulyLoggedInTheApplication() throws InterruptedException{
         System.out.println("Admin has successfully loged into application");
     }
 }

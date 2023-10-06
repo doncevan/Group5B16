@@ -13,6 +13,9 @@ public class AdminQualificationMembershipPage extends CommonMethods {
 
     @FindBy(xpath="//form[@id='frmList_ohrmListComponent']//input[@id='btnAdd']")
     public WebElement addMembershipBtn;
+
+    @FindBy(xpath="//form[@id='frmList_ohrmListComponent']//input[@id='btnDelete']")
+    public WebElement deleteMembershipBtn;
     @FindBy(xpath="//form//input[@id='membership_name']")
     public WebElement addMembershipNameField;
     @FindBy(xpath="//form//input[@id='btnSave']")
@@ -20,6 +23,9 @@ public class AdminQualificationMembershipPage extends CommonMethods {
 
     @FindBy(xpath="//form[@id='frmList_ohrmListComponent']//table[@id='resultTable']//tr/td[2]/a")
     public List<WebElement> membershipTableNames;
+
+    @FindBy(xpath="//form[@id='frmList_ohrmListComponent']//table[@id='resultTable']//tr/td[1]//input[contains(@value, '')]")
+    public List<WebElement> membershipTableCheckBoxs;
 
     public AdminQualificationMembershipPage(){
         PageFactory.initElements(driver, this);

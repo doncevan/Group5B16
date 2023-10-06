@@ -5,15 +5,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
+import java.util.List;
+
 public class addDependentsPage extends CommonMethods {
 
-    @FindBy(id = "empsearch_id")
+    @FindBy(xpath = "//form[@id='search_form']//input[@id='empsearch_id']")
     public WebElement idTextField;
 
-    @FindBy(id = "empsearch_employee_name_empName")
+    @FindBy(id = "//form[@id='search_form']//input[@id='empsearch_employee_name_empName']")
     public WebElement nameTextFiled;
 
-    @FindBy(id = "searchBtn")
+    @FindBy(xpath = "//form[@id='search_form']//input[@id='empsearch_id']")
     public WebElement searchButton;
 
 
@@ -23,33 +25,34 @@ public class addDependentsPage extends CommonMethods {
     @FindBy (id="btnAddDependent")
     public WebElement addInfoButton;
 
-    @FindBy(id="dependent_name")
+    @FindBy(xpath="//form[@id='frmEmpDependent']//input[@id='dependent_name']")
     public WebElement addNameTextBox;
 
-    @FindBy(id="dependent_relationshipType")
-    public WebElement relationshipList;
+    @FindBy(xpath="//form[@id='frmEmpDependent']//select[@id='dependent_relationshipType']")
+    public WebElement relationshipDropDownList;
 
     //dependent_relationship
-    @FindBy(id="dependent_relationship")
+    @FindBy(xpath="//form[@id='frmEmpDependent']//input[@id='dependent_relationship']")
     public  WebElement dependentSpecifyTextBox;
 
 
     //dependent_dateOfBirth
-    @FindBy(id="dependent_dateOfBirth")
+    @FindBy(xpath="//form[@id='frmEmpDependent']//input[@id='dependent_dateOfBirth']")
     public  WebElement dependentDateOfBirth;
 
-    @FindBy(id="btnSaveDependent")
+    @FindBy(xpath="//form[@id='frmEmpDependent']//input[@id='btnSaveDependent']")
     public WebElement dependentSaveBtn;
 
-    @FindBy(id="delDependentBtn")
+    @FindBy(xpath="//form[@id='frmEmpDelDependents']//input[@id='delDependentBtn']")
     public WebElement deleteBtn;
-    @FindBy(xpath = "//table/tbody/tr[2]/td/input[@class=\"checkbox\"]")
+
+    @FindBy(xpath = "//form[@id='frmEmpDelDependents']//table[@id='dependent_list']//tr[2]/td[1]/input")
     public WebElement checkBoxDependents;
 
-    @FindBy(xpath = "//table//tbody//tr[2]")
+    @FindBy(xpath = "//form[@id='frmEmpDelDependents']//table[@id='dependent_list']//tr[2]/td[1]/input")
     public WebElement theSecondDependents;
 
-    @FindBy(xpath = "//fieldset/ol/li[5][@class=\"required\"]")
+    @FindBy(xpath = "//form[@id='frmEmpDependent']//span")
     public WebElement errorMsg;
 
     public addDependentsPage() {

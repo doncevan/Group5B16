@@ -4,10 +4,10 @@ Feature: Admin add membership
     Given user is navigated to HRMS application
 
   @admin @Daniel2
- Scenario Outline:
-   When admin navigates to Qualifications Page
-   And selects memberships
-   Then admin user can add any "<memberships>"
+  Scenario Outline:
+    When admin navigates to Qualifications Page
+    And selects memberships
+    Then admin user can add any "<memberships>"
     Examples:
       | memberships |
       | 0Amazon     |

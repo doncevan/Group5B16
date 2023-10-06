@@ -120,6 +120,30 @@ public class CommonMethods extends PageInitializer {
        return actualString;
     }
 
+    public static int getIndexOfStringInsideWebTableOrColumn(String expectedString, List<WebElement> webList){
+        int num = 0;
+        for(WebElement strings : webList){
+            String string =  strings.getText();
+            if(string.equals(expectedString)){
+               return webList.indexOf(strings);
+            } else{ continue; }
+        }
+        return num;
+    }
+
+    public static WebElement returnCheckBoxByStringVSWebTableRowOrColumn(String expectedString, List<WebElement> stringColumn, List<WebElement> checkBoxColumn){
+        WebElement checkBox = null;
+
+        for(int index =0; index<stringColumn.size(); index++){
+            String string = stringColumn.get(index).getText();
+            if(expectedString.equals(string)){
+                 checkBox = checkBoxColumn.get(index);
+                return checkBox;
+
+            }
+        }
+       return null;
+    }
 
 
 

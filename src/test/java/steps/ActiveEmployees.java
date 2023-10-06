@@ -34,7 +34,7 @@ public class ActiveEmployees extends CommonMethods {
         click(activeEmpPage.selectActiveEmp);
     }
 
-    @And("admin clicks on search button")
+    @And("admin clicks on search button1")
     public void adminClicksOnSearchButton() {
         click(activeEmpPage.searchBtn);
     }

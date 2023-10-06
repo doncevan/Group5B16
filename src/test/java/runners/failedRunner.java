@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "@target/failed.txt",
         glue = "steps",
-        plugin = {"pretty"}
+        plugin = {"pretty", "html: target/cucumber.html", "json: target/cucumber.json"}
 )
 public class failedRunner {
 

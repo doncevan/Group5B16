@@ -1,17 +1,24 @@
 Feature: Admin terminates employment
 
   Background:
-      Given user is navigated to HRMS application
+    #Given admin user is navigated to HRMS website
+    When admin enters valid username and password
+    And admin clicks on login button
+    Then admin is successfuly logged in the application
+    #Given admin is navigated to employee information
+    When  admin clicks on PIM and employee list option
 
-    @admin @Daniel1
-    Scenario Outline: admin can terminate employee by username
-      And admin navigates to admin user management page
-      When admin enters "<username>" and searches employee
-      Then admin checks "<username>" checkbox and deletes employee record
+  @admin @Daniel1
+  Scenario Outline: admin can terminate employee by id
+    When admin enters "<id>" and searches employee
+    And admin clicks on id and navigates to job details
+    When admin clicks terminate btn and gives a reason
+    Then validate employee terminated
 
-      Examples:
-      |username      |
-      |aaa12345      |
-      |Aaaandrooo1234|
-      |aaandrooo123  |
+    Examples:
+      | id     |
+      | 89286A |
+      | 88749A |
+      | 89150A |
+
 

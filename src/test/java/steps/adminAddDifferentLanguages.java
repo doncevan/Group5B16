@@ -12,14 +12,13 @@ import utils.ConfigReader;
 public class adminAddDifferentLanguages extends CommonMethods {
     @Given("Admin logged in")
     public void admin_logged_in() {
-        sendText(ConfigReader.getPropertyValue("username"), loginPage.usernameField);
-        sendText(ConfigReader.getPropertyValue("password"), loginPage.passwordField);
+        sendText(ConfigReader.getPropertyValue("adminusername"), loginPage.usernameField);
+        sendText(ConfigReader.getPropertyValue("adminpassword"), loginPage.passwordField);
         click(loginPage.loginButton);
     }
     @When("Admin navigates to qualification")
     public void admin_navigates_to_qualification() throws InterruptedException {
         click(DashboardPage.dashboardPage.AdminMenuBtn);
-        Thread.sleep(2000);
         click(dashboardPage.adminQualificationBtn);
     }
     @When("Select languages")

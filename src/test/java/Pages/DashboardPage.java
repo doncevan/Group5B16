@@ -13,6 +13,8 @@ public class DashboardPage extends CommonMethods {
     public WebElement pimDashboardBtn;
 
     @FindBy(id="menu_pim_viewEmployeeList")
+    public WebElement empListOption;
+
     public WebElement pimEmployeeBtn;
     @FindBy(id="menu_admin_viewAdminModule")
     public WebElement AdminMenuBtn;
@@ -21,10 +23,9 @@ public class DashboardPage extends CommonMethods {
 
     @FindBy(id="menu_admin_membership")
     public WebElement adminQualificationMembershipBtn;
-
-//duplicate webelement
     @FindBy(id="menu_admin_viewAdminModule")
     public WebElement adminDashboardBtn;
+
 
 //fekadu
     @FindBy(id="btnAdd")
