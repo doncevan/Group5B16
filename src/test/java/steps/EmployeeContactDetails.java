@@ -4,7 +4,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.log4j.xml.DOMConfigurator;
+//import org.apache.log4j.xml.DOMConfigurator;
+import org.apache.logging.log4j.core.config.Configurator;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import utils.CommonMethods;
@@ -18,7 +19,8 @@ public class EmployeeContactDetails extends CommonMethods {
 
     @When("employee enters valid username and password")
     public void employeeEntersValidUsernameAndPassword() {
-        DOMConfigurator.configure("log4j.xml");
+        //DOMConfigurator.configure("log4j.xml");
+        Configurator.initialize(null, "log4j.xml");
         Log.startTestCase("The employee's contact details update test case starts here");
         sendText(ConfigReader.getPropertyValue("essusername"), loginPage.usernameField);
         Log.info("Username has been entered");

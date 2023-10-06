@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Group5B16</td>
+        <td>1</td>
+      <td>06 Oct 2023, 13:52</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">steps.ActiveEmployees.adminClicksOnEmploymentStatusAndSelectedActive()</td>
+              <td>1</td>
+              <td class="duration" data-value="2144133900">2.144</td>
+              <td class="duration" data-value="2144133900">2.144</td>
+              <td class="duration" data-value="2144133900">2.144</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.ActiveEmployees.adminIsOnThePIMPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="14612487200">14.612</td>
+              <td class="duration" data-value="14612487200">14.612</td>
+              <td class="duration" data-value="14612487200">14.612</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.ActiveEmployees.adminIsSuccessfullyAbleToViewAllEmployeesOnTheActiveList()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.ActiveEmployees.adminStoresActiveEmployeesOnAListOrATable()</td>
+              <td>1</td>
+              <td class="duration" data-value="147000100">0.147</td>
+              <td class="duration" data-value="147000100">0.147</td>
+              <td class="duration" data-value="147000100">0.147</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AddDependentsSteps.theUserEntersAndAndInDataDrivenFormat(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="1707900366">1.707</td>
+              <td class="duration" data-value="1707900366">1.771</td>
+              <td class="duration" data-value="5123701100">5.123</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AddDependentsSteps.the_hrms_application_displays_error_messages()</td>
+              <td>1</td>
+              <td class="duration" data-value="1003200">0.001</td>
+              <td class="duration" data-value="1003200">0.001</td>
+              <td class="duration" data-value="1003200">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AddDependentsSteps.the_hrms_application_should_no_longer_display_the_second_dependent_in_the_list_of_dependents()</td>
+              <td>1</td>
+              <td class="duration" data-value="1379516400">1.379</td>
+              <td class="duration" data-value="1379516400">1.379</td>
+              <td class="duration" data-value="1379516400">1.379</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AddDependentsSteps.userClickOnAddButton()</td>
+              <td>4</td>
+              <td class="duration" data-value="71000000">0.071</td>
+              <td class="duration" data-value="71000000">0.081</td>
+              <td class="duration" data-value="284000000">0.284</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AddDependentsSteps.userEntersInvalidInformationAndAndVerifyingThe(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="297831700">0.297</td>
+              <td class="duration" data-value="297831700">0.297</td>
+              <td class="duration" data-value="297831700">0.297</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AddDependentsSteps.user_clicks_on_pim_option_and_employee_list_option()</td>
+              <td>5</td>
+              <td class="duration" data-value="6186515460">6.186</td>
+              <td class="duration" data-value="6186515460">6.543</td>
+              <td class="duration" data-value="30932577300">30.932</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AddDependentsSteps.user_clicks_on_search_button()</td>
+              <td>5</td>
+              <td class="duration" data-value="65806220">0.065</td>
+              <td class="duration" data-value="65806220">0.074</td>
+              <td class="duration" data-value="329031100">0.329</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AddDependentsSteps.user_enters_valid_employee_id()</td>
+              <td>5</td>
+              <td class="duration" data-value="76982600">0.076</td>
+              <td class="duration" data-value="76982600">0.089</td>
+              <td class="duration" data-value="384913000">0.384</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AddDependentsSteps.user_is_logged_into_the_hrms_system_application()</td>
+              <td>5</td>
+              <td class="duration" data-value="1566146580">1.566</td>
+              <td class="duration" data-value="1566146580">1.606</td>
+              <td class="duration" data-value="7830732900">7.830</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AddDependentsSteps.user_navigates_to_the_dependents_section()</td>
+              <td>5</td>
+              <td class="duration" data-value="957619420">0.957</td>
+              <td class="duration" data-value="957619420">1.190</td>
+              <td class="duration" data-value="4788097100">4.788</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AddDependentsSteps.user_removes_the_second_dependent_from_the_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AddDependentsSteps.user_selects_the_employee_file()</td>
+              <td>5</td>
+              <td class="duration" data-value="6471983320">6.471</td>
+              <td class="duration" data-value="6471983320">6.594</td>
+              <td class="duration" data-value="32359916600">32.359</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminCanSelectEmploymentStatusOfTheEmployee()</td>
+              <td>1</td>
+              <td class="duration" data-value="106998800">0.106</td>
+              <td class="duration" data-value="106998800">0.106</td>
+              <td class="duration" data-value="106998800">0.106</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminCanSelectJobCategoryOfTheEmployee()</td>
+              <td>1</td>
+              <td class="duration" data-value="81701900">0.081</td>
+              <td class="duration" data-value="81701900">0.081</td>
+              <td class="duration" data-value="81701900">0.081</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminCanSelectJobTitleOfTheEmployee()</td>
+              <td>1</td>
+              <td class="duration" data-value="116968600">0.116</td>
+              <td class="duration" data-value="116968600">0.116</td>
+              <td class="duration" data-value="116968600">0.116</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminCanSelectTheDateWhenTheEmployeeJoinedTheOrganization()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminCanSelectTheEndDateOfEmployeeSCurrentJob()</td>
+              <td>1</td>
+              <td class="duration" data-value="104001800">0.104</td>
+              <td class="duration" data-value="104001800">0.104</td>
+              <td class="duration" data-value="104001800">0.104</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminCanSelectTheLocationWhereEmployeeIsCurrentlyWorking()</td>
+              <td>1</td>
+              <td class="duration" data-value="86997900">0.086</td>
+              <td class="duration" data-value="86997900">0.086</td>
+              <td class="duration" data-value="86997900">0.086</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminCanSelectTheMonthWhenEmployeeJoinedTheOrganization()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminCanSelectTheStartingDateOfEmployeeSCurrentJob()</td>
+              <td>1</td>
+              <td class="duration" data-value="100998300">0.100</td>
+              <td class="duration" data-value="100998300">0.100</td>
+              <td class="duration" data-value="100998300">0.100</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminCanSelectTheSubUnitWhereTheEmployeeIsCurrentlyWorking()</td>
+              <td>1</td>
+              <td class="duration" data-value="122435900">0.122</td>
+              <td class="duration" data-value="122435900">0.122</td>
+              <td class="duration" data-value="122435900">0.122</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminCanSelectTheYearWhenEmployeeJoinedTheOrganization()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnChooseFileButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="26001900">0.026</td>
+              <td class="duration" data-value="26001900">0.026</td>
+              <td class="duration" data-value="26001900">0.026</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnEditButton()</td>
+              <td>9</td>
+              <td class="duration" data-value="70538600">0.070</td>
+              <td class="duration" data-value="70538600">0.082</td>
+              <td class="duration" data-value="634847400">0.634</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnEmployeeSProfile()</td>
+              <td>9</td>
+              <td class="duration" data-value="6721900933">6.721</td>
+              <td class="duration" data-value="6721900933">7.077</td>
+              <td class="duration" data-value="60497108400">1:0.497</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnEmploymentStatusDropdown()</td>
+              <td>1</td>
+              <td class="duration" data-value="69485700">0.069</td>
+              <td class="duration" data-value="69485700">0.069</td>
+              <td class="duration" data-value="69485700">0.069</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnEndDateCalender()</td>
+              <td>1</td>
+              <td class="duration" data-value="88001300">0.088</td>
+              <td class="duration" data-value="88001300">0.088</td>
+              <td class="duration" data-value="88001300">0.088</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnJob()</td>
+              <td>9</td>
+              <td class="duration" data-value="1612572511">1.612</td>
+              <td class="duration" data-value="1612572511">1.705</td>
+              <td class="duration" data-value="14513152600">14.513</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnJobCategoryDropdown()</td>
+              <td>1</td>
+              <td class="duration" data-value="77934900">0.077</td>
+              <td class="duration" data-value="77934900">0.077</td>
+              <td class="duration" data-value="77934900">0.077</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnJobTitleDropdown()</td>
+              <td>1</td>
+              <td class="duration" data-value="124000200">0.124</td>
+              <td class="duration" data-value="124000200">0.124</td>
+              <td class="duration" data-value="124000200">0.124</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnJoinedDateCalendar()</td>
+              <td>1</td>
+              <td class="duration" data-value="119537900">0.119</td>
+              <td class="duration" data-value="119537900">0.119</td>
+              <td class="duration" data-value="119537900">0.119</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnLocationDropdown()</td>
+              <td>1</td>
+              <td class="duration" data-value="77005900">0.077</td>
+              <td class="duration" data-value="77005900">0.077</td>
+              <td class="duration" data-value="77005900">0.077</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnPIMAndEmployeeListOption()</td>
+              <td>12</td>
+              <td class="duration" data-value="14423571933">14.423</td>
+              <td class="duration" data-value="14423571933">14.998</td>
+              <td class="duration" data-value="173082863200">2:53.082</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnSaveButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="3155138900">3.155</td>
+              <td class="duration" data-value="3155138900">3.155</td>
+              <td class="duration" data-value="3155138900">3.155</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnSearchButton()</td>
+              <td>10</td>
+              <td class="duration" data-value="6727743260">6.727</td>
+              <td class="duration" data-value="6727743260">7.525</td>
+              <td class="duration" data-value="67277432600">1:7.277</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnStartDateCalender()</td>
+              <td>1</td>
+              <td class="duration" data-value="95999700">0.095</td>
+              <td class="duration" data-value="95999700">0.095</td>
+              <td class="duration" data-value="95999700">0.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminClicksOnSubUnitDropdown()</td>
+              <td>1</td>
+              <td class="duration" data-value="69574600">0.069</td>
+              <td class="duration" data-value="69574600">0.069</td>
+              <td class="duration" data-value="69574600">0.069</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminEnterValidEmployeeId()</td>
+              <td>9</td>
+              <td class="duration" data-value="75296644">0.075</td>
+              <td class="duration" data-value="75296644">0.088</td>
+              <td class="duration" data-value="677669800">0.677</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminIsAbleToEditJobInformation()</td>
+              <td>9</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminIsAbleToSaveTheChanges()</td>
+              <td>9</td>
+              <td class="duration" data-value="110911">0.000</td>
+              <td class="duration" data-value="110911">0.000</td>
+              <td class="duration" data-value="998200">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddJobDetailsSteps.adminIsAbleToSeeEmployeeInformation()</td>
+              <td>9</td>
+              <td class="duration" data-value="110644">0.000</td>
+              <td class="duration" data-value="110644">0.000</td>
+              <td class="duration" data-value="995800">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddMembership.adminNavigatesToQualificationsPage()</td>
+              <td>3</td>
+              <td class="duration" data-value="3362972033">3.362</td>
+              <td class="duration" data-value="3362972033">3.677</td>
+              <td class="duration" data-value="10088916100">10.088</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddMembership.adminUserCanAddAny(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="5581660200">5.581</td>
+              <td class="duration" data-value="5581660200">5.829</td>
+              <td class="duration" data-value="16744980600">16.744</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminAddMembership.selectsMemberships()</td>
+              <td>3</td>
+              <td class="duration" data-value="98695866">0.098</td>
+              <td class="duration" data-value="98695866">0.100</td>
+              <td class="duration" data-value="296087600">0.296</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminLoginSteps.adminClicksOnLoginButton()</td>
+              <td>13</td>
+              <td class="duration" data-value="1516597069">1.516</td>
+              <td class="duration" data-value="1516597069">1.765</td>
+              <td class="duration" data-value="19715761900">19.715</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminLoginSteps.adminEntersValidUsernameAndPassword()</td>
+              <td>13</td>
+              <td class="duration" data-value="185483646">0.185</td>
+              <td class="duration" data-value="185483646">0.303</td>
+              <td class="duration" data-value="2411287400">2.411</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.AdminLoginSteps.adminIsSuccessfulyLoggedInTheApplication()</td>
+              <td>13</td>
+              <td class="duration" data-value="76984">0.000</td>
+              <td class="duration" data-value="76984">0.001</td>
+              <td class="duration" data-value="1000800">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_adds_text_in_comment_text_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="74985100">0.074</td>
+              <td class="duration" data-value="74985100">0.074</td>
+              <td class="duration" data-value="74985100">0.074</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_checks_a_check_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="59997800">0.059</td>
+              <td class="duration" data-value="59997800">0.059</td>
+              <td class="duration" data-value="59997800">0.059</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_clicks_on_add_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="67477300">0.067</td>
+              <td class="duration" data-value="67477300">0.067</td>
+              <td class="duration" data-value="67477300">0.067</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_clicks_on_delete_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="1180976300">1.180</td>
+              <td class="duration" data-value="1180976300">1.180</td>
+              <td class="duration" data-value="1180976300">1.180</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_clicks_on_login_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="1228156350">1.228</td>
+              <td class="duration" data-value="1228156350">1.231</td>
+              <td class="duration" data-value="2456312700">2.456</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_clicks_on_my_info_tab()</td>
+              <td>2</td>
+              <td class="duration" data-value="1001498000">1.001</td>
+              <td class="duration" data-value="1001498000">1.109</td>
+              <td class="duration" data-value="2002996000">2.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_clicks_on_qualifications_option()</td>
+              <td>2</td>
+              <td class="duration" data-value="976691600">0.976</td>
+              <td class="duration" data-value="976691600">0.999</td>
+              <td class="duration" data-value="1953383200">1.953</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_clicks_on_save_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="1212939700">1.212</td>
+              <td class="duration" data-value="1212939700">1.212</td>
+              <td class="duration" data-value="1212939700">1.212</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_enters_valid_employee_username_and_password()</td>
+              <td>2</td>
+              <td class="duration" data-value="150493600">0.150</td>
+              <td class="duration" data-value="150493600">0.150</td>
+              <td class="duration" data-value="300987200">0.300</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_is_successfully_logged_in_the_application()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_selects_competency_dropdown()</td>
+              <td>1</td>
+              <td class="duration" data-value="65997300">0.065</td>
+              <td class="duration" data-value="65997300">0.065</td>
+              <td class="duration" data-value="65997300">0.065</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_selects_fluency_dropdown()</td>
+              <td>1</td>
+              <td class="duration" data-value="71291200">0.071</td>
+              <td class="duration" data-value="71291200">0.071</td>
+              <td class="duration" data-value="71291200">0.071</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_selects_language_dropdown()</td>
+              <td>1</td>
+              <td class="duration" data-value="77161300">0.077</td>
+              <td class="duration" data-value="77161300">0.077</td>
+              <td class="duration" data-value="77161300">0.077</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.employee_successfully_deletes_his_language_details()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.system_should_validate_that_mandatory_fields_are_filled_in()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeAddsLanguageProficiencyDetailsSteps.the_system_stores_the_language_proficiency_details_in_the_employee_profile()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetailSteps.userClicksOnContactDetail()</td>
+              <td>1</td>
+              <td class="duration" data-value="6058116800">6.058</td>
+              <td class="duration" data-value="6058116800">6.058</td>
+              <td class="duration" data-value="6058116800">6.058</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetailSteps.userClicksOnLoginButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="1267318900">1.267</td>
+              <td class="duration" data-value="1267318900">1.267</td>
+              <td class="duration" data-value="1267318900">1.267</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetailSteps.userClicksOnMyInfoTab()</td>
+              <td>1</td>
+              <td class="duration" data-value="1035662400">1.035</td>
+              <td class="duration" data-value="1035662400">1.035</td>
+              <td class="duration" data-value="1035662400">1.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetailSteps.userContactDetailsShouldBeUpdatedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="84999200">0.084</td>
+              <td class="duration" data-value="84999200">0.084</td>
+              <td class="duration" data-value="84999200">0.084</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetailSteps.userEditsContactDetailsUsingExcelFileAndSaveIt(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1701680100">1.701</td>
+              <td class="duration" data-value="1701680100">1.701</td>
+              <td class="duration" data-value="1701680100">1.701</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetailSteps.userEntersValidEssUsernameAndPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="257022700">0.257</td>
+              <td class="duration" data-value="257022700">0.257</td>
+              <td class="duration" data-value="257022700">0.257</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetailSteps.userIsOnContactDetailPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetailSteps.userIsSuccessfullyLoggedInTheApplication()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeeClicksOnEditButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="70999400">0.070</td>
+              <td class="duration" data-value="70999400">0.070</td>
+              <td class="duration" data-value="70999400">0.070</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeeClicksOnLoginButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="1252859000">1.252</td>
+              <td class="duration" data-value="1252859000">1.252</td>
+              <td class="duration" data-value="1252859000">1.252</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeeClicksOnMyInfoTab()</td>
+              <td>1</td>
+              <td class="duration" data-value="892961900">0.892</td>
+              <td class="duration" data-value="892961900">0.892</td>
+              <td class="duration" data-value="892961900">0.892</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeeClicksOnSaveButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="1014185300">1.014</td>
+              <td class="duration" data-value="1014185300">1.014</td>
+              <td class="duration" data-value="1014185300">1.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeeEditsFirstName()</td>
+              <td>1</td>
+              <td class="duration" data-value="81002800">0.081</td>
+              <td class="duration" data-value="81002800">0.081</td>
+              <td class="duration" data-value="81002800">0.081</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeeEditsGender()</td>
+              <td>1</td>
+              <td class="duration" data-value="55997000">0.055</td>
+              <td class="duration" data-value="55997000">0.055</td>
+              <td class="duration" data-value="55997000">0.055</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeeEditsLastName()</td>
+              <td>1</td>
+              <td class="duration" data-value="73998600">0.073</td>
+              <td class="duration" data-value="73998600">0.073</td>
+              <td class="duration" data-value="73998600">0.073</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeeEditsMaritalStatus()</td>
+              <td>1</td>
+              <td class="duration" data-value="48999600">0.048</td>
+              <td class="duration" data-value="48999600">0.048</td>
+              <td class="duration" data-value="48999600">0.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeeEditsMiddleName()</td>
+              <td>1</td>
+              <td class="duration" data-value="75996400">0.075</td>
+              <td class="duration" data-value="75996400">0.075</td>
+              <td class="duration" data-value="75996400">0.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeeEditsNationality()</td>
+              <td>1</td>
+              <td class="duration" data-value="52999200">0.052</td>
+              <td class="duration" data-value="52999200">0.052</td>
+              <td class="duration" data-value="52999200">0.052</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeeEntersValidUsernameAndPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="157281600">0.157</td>
+              <td class="duration" data-value="157281600">0.157</td>
+              <td class="duration" data-value="157281600">0.157</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeeHasSuccessfullyNavigatedToHRMSSite()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.employeesPersonalInformationShouldBeSaved()</td>
+              <td>1</td>
+              <td class="duration" data-value="5996000">0.005</td>
+              <td class="duration" data-value="5996000">0.005</td>
+              <td class="duration" data-value="5996000">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeContactDetails.theEmployeeNavigatedOnHRMSSite()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.givenMembershipAccountHasBeenDeleted()</td>
+              <td>1</td>
+              <td class="duration" data-value="6993700">0.006</td>
+              <td class="duration" data-value="6993700">0.006</td>
+              <td class="duration" data-value="6993700">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeClicksAddButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="64027900">0.064</td>
+              <td class="duration" data-value="64027900">0.064</td>
+              <td class="duration" data-value="64027900">0.064</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeClicksMembershipsOption()</td>
+              <td>3</td>
+              <td class="duration" data-value="804182333">0.804</td>
+              <td class="duration" data-value="804182333">0.869</td>
+              <td class="duration" data-value="2412547000">2.412</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeClicksOnCheckbox()</td>
+              <td>1</td>
+              <td class="duration" data-value="65319400">0.065</td>
+              <td class="duration" data-value="65319400">0.065</td>
+              <td class="duration" data-value="65319400">0.065</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeClicksOnDeleteButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="897198400">0.897</td>
+              <td class="duration" data-value="897198400">0.897</td>
+              <td class="duration" data-value="897198400">0.897</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeClicksOnLoginButton()</td>
+              <td>3</td>
+              <td class="duration" data-value="1299653933">1.299</td>
+              <td class="duration" data-value="1299653933">1.475</td>
+              <td class="duration" data-value="3898961800">3.898</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeClicksOnMyInfoTab()</td>
+              <td>3</td>
+              <td class="duration" data-value="1072414500">1.072</td>
+              <td class="duration" data-value="1072414500">1.152</td>
+              <td class="duration" data-value="3217243500">3.217</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeClicksOnSpecificMembershipAccount()</td>
+              <td>1</td>
+              <td class="duration" data-value="74628800">0.074</td>
+              <td class="duration" data-value="74628800">0.074</td>
+              <td class="duration" data-value="74628800">0.074</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeClicksTheSaveButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="1036328850">1.036</td>
+              <td class="duration" data-value="1036328850">1.103</td>
+              <td class="duration" data-value="2072657700">2.072</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeEditsAndAndAndAndAndInDataDrivenFormat(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="628567500">0.628</td>
+              <td class="duration" data-value="628567500">0.628</td>
+              <td class="duration" data-value="628567500">0.628</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeEntersAndAndAndAndAndInDataDrivenFormat(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="627002000">0.627</td>
+              <td class="duration" data-value="627002000">0.627</td>
+              <td class="duration" data-value="627002000">0.627</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeEntersValidEssUsernameAndPassword()</td>
+              <td>3</td>
+              <td class="duration" data-value="155581233">0.155</td>
+              <td class="duration" data-value="155581233">0.160</td>
+              <td class="duration" data-value="466743700">0.466</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeHasPreviouslySavedMembershipDetails()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theEmployeeIsSuccessfullyLoggedInTheApplication()</td>
+              <td>3</td>
+              <td class="duration" data-value="338433">0.000</td>
+              <td class="duration" data-value="338433">0.001</td>
+              <td class="duration" data-value="1015300">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theSystemShouldStoreTheMembershipDetailsInTheEmployeeSProfile()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theSystemShouldUpdateTheEmployeeSMembershipDetails()</td>
+              <td>1</td>
+              <td class="duration" data-value="5006800">0.005</td>
+              <td class="duration" data-value="5006800">0.005</td>
+              <td class="duration" data-value="5006800">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.EmployeeMembershipManagement.theSystemShouldValidateThatMandatoryFieldsAreFilledIn()</td>
+              <td>1</td>
+              <td class="duration" data-value="5998200">0.005</td>
+              <td class="duration" data-value="5998200">0.005</td>
+              <td class="duration" data-value="5998200">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.Hooks.end(io.cucumber.java.Scenario)</td>
+              <td>31</td>
+              <td class="duration" data-value="5442965777">5.442</td>
+              <td class="duration" data-value="5442965777">5.498</td>
+              <td class="duration" data-value="168731939100">2:48.731</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.Hooks.start()</td>
+              <td>31</td>
+              <td class="duration" data-value="2418737261">2.418</td>
+              <td class="duration" data-value="2418737261">4.590</td>
+              <td class="duration" data-value="74980855100">1:14.980</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.TerminateEmployeeScenario.adminClicksOnIdAndNavigatesToJobDetails()</td>
+              <td>3</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.TerminateEmployeeScenario.adminClicksTerminateBtnAndGivesAReason()</td>
+              <td>3</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.TerminateEmployeeScenario.adminEntersAndSearchesEmployee(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="46717051000">46.717</td>
+              <td class="duration" data-value="46717051000">46.769</td>
+              <td class="duration" data-value="140151153000">2:20.151</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.TerminateEmployeeScenario.userIsNavigatedToHRMSApplication()</td>
+              <td>4</td>
+              <td class="duration" data-value="1798381500">1.798</td>
+              <td class="duration" data-value="1798381500">1.941</td>
+              <td class="duration" data-value="7193526000">7.193</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.TerminateEmployeeScenario.validateEmployeeTerminated()</td>
+              <td>3</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.adminAddDifferentLanguages.admin_can_add_any_language()</td>
+              <td>1</td>
+              <td class="duration" data-value="3148476300">3.148</td>
+              <td class="duration" data-value="3148476300">3.148</td>
+              <td class="duration" data-value="3148476300">3.148</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.adminAddDifferentLanguages.admin_logged_in()</td>
+              <td>1</td>
+              <td class="duration" data-value="1526926800">1.526</td>
+              <td class="duration" data-value="1526926800">1.526</td>
+              <td class="duration" data-value="1526926800">1.526</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.adminAddDifferentLanguages.admin_navigates_to_qualification()</td>
+              <td>1</td>
+              <td class="duration" data-value="11651645300">11.651</td>
+              <td class="duration" data-value="11651645300">11.651</td>
+              <td class="duration" data-value="11651645300">11.651</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.adminAddDifferentLanguages.select_languages()</td>
+              <td>1</td>
+              <td class="duration" data-value="670402500">0.670</td>
+              <td class="duration" data-value="670402500">0.670</td>
+              <td class="duration" data-value="670402500">0.670</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.uploadProfilePicture.essClicksOnTheChangePhotoButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="602291000">0.602</td>
+              <td class="duration" data-value="602291000">0.602</td>
+              <td class="duration" data-value="602291000">0.602</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.uploadProfilePicture.essClicksOnTheUploadButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="810354600">0.810</td>
+              <td class="duration" data-value="810354600">0.810</td>
+              <td class="duration" data-value="810354600">0.810</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.uploadProfilePicture.essIsNavigatedToHRMSApplication()</td>
+              <td>1</td>
+              <td class="duration" data-value="1365322800">1.365</td>
+              <td class="duration" data-value="1365322800">1.365</td>
+              <td class="duration" data-value="1365322800">1.365</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.uploadProfilePicture.essIsOnTheMyInfoPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="1129981200">1.129</td>
+              <td class="duration" data-value="1129981200">1.129</td>
+              <td class="duration" data-value="1129981200">1.129</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.uploadProfilePicture.essSProfilePictureIsUpdated()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">steps.uploadProfilePicture.essSelectsAProfilePictureFromTheirComputer()</td>
+              <td>1</td>
+              <td class="duration" data-value="44722800">0.044</td>
+              <td class="duration" data-value="44722800">0.044</td>
+              <td class="duration" data-value="44722800">0.044</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>123</td>
+            <td>358</td>
+            <td class="duration">2.573</td>
+            <td class="duration">2:53.082</td>
+            <td class="duration">15:21.345</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

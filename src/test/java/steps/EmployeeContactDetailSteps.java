@@ -3,7 +3,8 @@ package steps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.log4j.xml.DOMConfigurator;
+//import org.apache.log4j.xml.DOMConfigurator;
+import org.apache.logging.log4j.core.config.Configurator;
 import org.junit.Assert;
 import utils.*;
 
@@ -18,7 +19,8 @@ public class EmployeeContactDetailSteps extends CommonMethods {
     }*/
     @When("user enters valid ess username and password")
     public void userEntersValidEssUsernameAndPassword() {
-        DOMConfigurator.configure("log4j.xml");
+        //DOMConfigurator.configure("log4j.xml");
+        Configurator.initialize(null, "log4j.xml");
         Log.startTestCase("My project test case starts here");
         sendText(ConfigReader.getPropertyValue("essusername"),loginPage.usernameField);
         sendText(ConfigReader.getPropertyValue("esspassword"),loginPage.passwordField);

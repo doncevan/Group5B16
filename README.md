@@ -1,7 +1,7 @@
 # HRMSApplication
 Development Team:
 
-Ivan D. ,  Osana Z.,  Fatima H.,  Assel K.,  Fekadu S.,  Ayaulym S.,  Adrian V.,  Engracia V.,  
+Ivan D. ,  Oksana Z.,  Fatima H.,  Assel K.,  Fekadu S.,  Ayaulym S.,  Adrian V.,  Engracia V.,  
 
 Daniel J. - Team Lead 
 
@@ -20,7 +20,7 @@ Verify and validate admin and employee functionalities
 11. Profile Picture Upload for ESS Users
 12. Employee Directory View in the HRMS Application
 
-# Framwork
+# Framework
 ### Non-Technical:
 
 Agile Framework - Scrumban
@@ -40,10 +40,10 @@ target/cucumber.html
 
 target/cucumber.json
 
-screemshots/*
+screenshots/*
 
 ## To Be Fixed
-- Refactor for easier readability and reusability 
+- Refactor for easier readability and re-usability 
 - Adding supporting code for deleting users from website
   
 
