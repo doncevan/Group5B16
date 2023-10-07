@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: runners.runnerClass
--------------------------------------------------------------------------------
-Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 703.4 s -- in runners.runnerClass

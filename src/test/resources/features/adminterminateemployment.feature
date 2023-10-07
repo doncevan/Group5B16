@@ -17,6 +17,6 @@ Feature: Admin terminates employment
 
     Examples:
       | id     |
-      | 89109A  |
-      | 88146A  |
-      | 90038A  |
+      | 93248A |
+      | 93252A |
+      | 93253A |
