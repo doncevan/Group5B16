@@ -4,7 +4,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-//import org.apache.log4j.xml.DOMConfigurator;
 import org.apache.logging.log4j.core.config.Configurator;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
@@ -20,7 +19,7 @@ public class EmployeeMembershipManagement extends CommonMethods {
 
     @When("the employee enters valid ess username and password")
     public void theEmployeeEntersValidEssUsernameAndPassword() {
-       // DOMConfigurator.configure("log4j.xml");
+        // DOMConfigurator.configure("log4j.xml");
         Configurator.initialize(null, "log4j.xml");
         Log.startTestCase("My employee membership management test case starts here");
         sendText(ConfigReader.getPropertyValue("essusername"), loginPage.usernameField);
@@ -63,7 +62,6 @@ public class EmployeeMembershipManagement extends CommonMethods {
 
         Select subscriptionPaidBySelect = new Select(employeeDetailsManagementPage.subscriptionPaidByDropdown);
         subscriptionPaidBySelect.selectByVisibleText(SubscriptionPaidBy);
-
         sendText(SubscriptionAmount, employeeDetailsManagementPage.subscriptionAmountField);
 
         Select currencySelect = new Select(employeeDetailsManagementPage.currencyDropdown);
@@ -73,8 +71,6 @@ public class EmployeeMembershipManagement extends CommonMethods {
         sendText(SubscriptionRenewalDate, employeeDetailsManagementPage.renewalDateField);
         click(employeeDetailsManagementPage.commenceDateField);
         sendText(SubscriptionCommenceDate, employeeDetailsManagementPage.commenceDateField);
-
-
     }
 
     @And("the employee clicks the save button")
@@ -116,7 +112,6 @@ public class EmployeeMembershipManagement extends CommonMethods {
 
         Select subscriptionPaidBySelect = new Select(employeeDetailsManagementPage.subscriptionPaidByDropdown);
         subscriptionPaidBySelect.selectByVisibleText(SubscriptionPaidBy);
-
         sendText(SubscriptionAmount, employeeDetailsManagementPage.subscriptionAmountField);
 
         Select currencySelect = new Select(employeeDetailsManagementPage.currencyDropdown);
@@ -137,7 +132,8 @@ public class EmployeeMembershipManagement extends CommonMethods {
     }
 
     @When("the employee clicks on checkbox")
-    public void theEmployeeClicksOnCheckbox() { click(employeeDetailsManagementPage.checkBox);
+    public void theEmployeeClicksOnCheckbox() {
+        click(employeeDetailsManagementPage.checkBox);
     }
 
     @And("the employee clicks on Delete button")

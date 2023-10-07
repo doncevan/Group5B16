@@ -6,8 +6,4 @@ Feature:Admin logs into HRMS application
   Scenario: Valid admin login
     When admin enters valid username and password
     And admin clicks on login button
-    Then admin is successfuly logged in the application
-
-
-
-
+    Then admin is successfully logged in the application

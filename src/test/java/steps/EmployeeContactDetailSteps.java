@@ -3,7 +3,6 @@ package steps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-//import org.apache.log4j.xml.DOMConfigurator;
 import org.apache.logging.log4j.core.config.Configurator;
 import org.junit.Assert;
 import utils.*;
@@ -13,17 +12,14 @@ import java.util.List;
 import java.util.Map;
 
 public class EmployeeContactDetailSteps extends CommonMethods {
-    /*@Given("user is navigated to HRMS application")
-    public void user_is_navigated_to_hrms_application() {
-        openBrowserAndNavigateToURL();
-    }*/
+
     @When("user enters valid ess username and password")
     public void userEntersValidEssUsernameAndPassword() {
         //DOMConfigurator.configure("log4j.xml");
         Configurator.initialize(null, "log4j.xml");
         Log.startTestCase("My project test case starts here");
-        sendText(ConfigReader.getPropertyValue("essusername"),loginPage.usernameField);
-        sendText(ConfigReader.getPropertyValue("esspassword"),loginPage.passwordField);
+        sendText(ConfigReader.getPropertyValue("essusername"), loginPage.usernameField);
+        sendText(ConfigReader.getPropertyValue("esspassword"), loginPage.passwordField);
     }
 
     @And("user clicks on login button")
@@ -44,9 +40,7 @@ public class EmployeeContactDetailSteps extends CommonMethods {
 
     @When("user clicks on contact detail")
     public void userClicksOnContactDetail() throws InterruptedException {
-
         click(employeeContactDetailPage.contactDetailBtn);
-
         Log.info("clicking on contact detail btn");
         click(employeeContactDetailPage.editBtn);
         Log.info("clicking on edit btn");
@@ -60,7 +54,7 @@ public class EmployeeContactDetailSteps extends CommonMethods {
     @When("user edits contact details using excel file {string} and save it")
     public void userEditsContactDetailsUsingExcelFileAndSaveIt(String sheetName) {
         List<Map<String, String>> newContactDetail =
-                ExcelReader.readData(sheetName, Constants.EXCEL_READER_PATHA);
+                ExcelReader.readData(sheetName, Constants.EXCEL_READER_PATH);
         Iterator<Map<String, String>> itr = newContactDetail.iterator();
         while (itr.hasNext()) {
             //in this map,we have data from every employee
@@ -80,12 +74,13 @@ public class EmployeeContactDetailSteps extends CommonMethods {
             click(employeeContactDetailPage.saveBtn);
         }
     }
+
     @Then("user contact details should be updated successfully")
     public void userContactDetailsShouldBeUpdatedSuccessfully() {
         click(employeeContactDetailPage.editBtn);
-        String actualText=employeeContactDetailPage.emailTextBox.getAttribute("value");
+        String actualText = employeeContactDetailPage.emailTextBox.getAttribute("value");
         Log.info("my test case ended here");
-        String expectedText="catty@gmail.com";
-        Assert.assertEquals(expectedText,actualText);
+        String expectedText = "catty@gmail.com";
+        Assert.assertEquals(expectedText, actualText);
     }
 }

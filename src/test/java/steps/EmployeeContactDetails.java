@@ -4,7 +4,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-//import org.apache.log4j.xml.DOMConfigurator;
 import org.apache.logging.log4j.core.config.Configurator;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
@@ -19,7 +18,6 @@ public class EmployeeContactDetails extends CommonMethods {
 
     @When("employee enters valid username and password")
     public void employeeEntersValidUsernameAndPassword() {
-        //DOMConfigurator.configure("log4j.xml");
         Configurator.initialize(null, "log4j.xml");
         Log.startTestCase("The employee's contact details update test case starts here");
         sendText(ConfigReader.getPropertyValue("essusername"), loginPage.usernameField);
@@ -29,7 +27,8 @@ public class EmployeeContactDetails extends CommonMethods {
     }
 
     @And("employee clicks on login button")
-    public void employeeClicksOnLoginButton() { click(loginPage.loginButton);
+    public void employeeClicksOnLoginButton() {
+        click(loginPage.loginButton);
     }
 
     @Then("employee has successfully navigated to HRMS site")
@@ -38,7 +37,8 @@ public class EmployeeContactDetails extends CommonMethods {
     }
 
     @When("employee clicks on My Info tab")
-    public void employeeClicksOnMyInfoTab() { click(employeeDetailsManagementPage.myInfoTab);
+    public void employeeClicksOnMyInfoTab() {
+        click(employeeDetailsManagementPage.myInfoTab);
     }
 
     @And("employee clicks on Edit button")

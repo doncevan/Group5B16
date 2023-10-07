@@ -11,14 +11,12 @@ public class PageInitializer {
     public static EmployeeDetailsManagementPage employeeDetailsManagementPage;
     public static PicturePage picturePage;
     public static AdminUserManagementPage adminUMPage;
-    public static AdminAddJobDetailsPage adminAddJobDetaisPage;
+    public static AdminAddJobDetailsPage adminAddJobDetailsPage;
     public static AdminQualificationMembershipPage adminMemPage;
     public static ActiveEmployeePage activeEmpPage;
     public static EmployeeContactDetailPage employeeContactDetailPage;
     public static EmployeeAddsLanguageProficiencyDetailsPage employeeAddsLanguageProficiencyDetailsPage;
-
     public static addDependentsPage addDepPage;
-
 
 
     public static void initializePageObjects() {
@@ -28,13 +26,11 @@ public class PageInitializer {
         employeeDetailsManagementPage = new EmployeeDetailsManagementPage();
         picturePage = new PicturePage();
         adminUMPage = new AdminUserManagementPage();
-        adminAddJobDetaisPage = new AdminAddJobDetailsPage();
+        adminAddJobDetailsPage = new AdminAddJobDetailsPage();
         adminMemPage = new AdminQualificationMembershipPage();
         activeEmpPage = new ActiveEmployeePage();
-        employeeContactDetailPage=new EmployeeContactDetailPage();
-        employeeAddsLanguageProficiencyDetailsPage=new EmployeeAddsLanguageProficiencyDetailsPage();
+        employeeContactDetailPage = new EmployeeContactDetailPage();
+        employeeAddsLanguageProficiencyDetailsPage = new EmployeeAddsLanguageProficiencyDetailsPage();
         addDepPage = new addDependentsPage();
-
-
     }
 }

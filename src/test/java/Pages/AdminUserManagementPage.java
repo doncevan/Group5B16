@@ -7,10 +7,10 @@ import utils.CommonMethods;
 
 public class AdminUserManagementPage extends CommonMethods {
 
-    @FindBy(id="searchSystemUser_userName")
+    @FindBy(id = "searchSystemUser_userName")
     public WebElement searchUserNameField;
 
-    @FindBy(id="searchBtn")
+    @FindBy(id = "searchBtn")
     public WebElement searchButton;
 
     @FindBy(xpath = "//table[@id='resultTable']//tr[1]/td[2]/a")
@@ -19,15 +19,15 @@ public class AdminUserManagementPage extends CommonMethods {
     @FindBy(xpath = "//table[@id='resultTable']//tr[1]/td[1]/input")
     public WebElement firstCheckBoxUserTable;
 
-    @FindBy(id="btnDelete")
+    @FindBy(id = "btnDelete")
     public WebElement deleteButton;
 
-    @FindBy(xpath="//form[@id='frmEmpJobDetails']//input[@id='btnTerminateEmployement']")
+    @FindBy(xpath = "//form[@id='frmEmpJobDetails']//input[@id='btnTerminateEmployement']")
     public WebElement terminateEmploymentBtn;
 
-    @FindBy(xpath="//form[@id='frmEmpJobDetails']//input[@id='btnTerminateEmployement']")
+    @FindBy(xpath = "//form[@id='frmEmpJobDetails']//input[@id='btnTerminateEmployement']")
     public WebElement activateEmploymentBtn;
-    @FindBy(id="dialogConfirm")
+    @FindBy(id = "dialogConfirm")
     public WebElement confirmTerminateBtn;
 
     @FindBy(xpath = "//form[@id='frmEmpJobDetails']//a[@id='terminateModal']")
@@ -36,7 +36,7 @@ public class AdminUserManagementPage extends CommonMethods {
 
     public final String expectedActivateEmp = "Activate Employment";
 
-    public AdminUserManagementPage(){
+    public AdminUserManagementPage() {
         PageFactory.initElements(driver, this);
     }
 }

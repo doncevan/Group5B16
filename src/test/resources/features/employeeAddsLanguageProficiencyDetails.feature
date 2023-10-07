@@ -3,7 +3,7 @@ Feature: Employee adds details
   #I also what to be able to edit or delete my previously saved language proficiency details
 
 
-Background:
+  Background:
     #Given employee is navigated to HRMS application
     When employee  enters valid employee username and password
     And employee  clicks on login button

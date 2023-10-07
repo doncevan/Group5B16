@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.CommonMethods;
 import utils.ConfigReader;
-
 import java.util.List;
 
 public class ActiveEmployees extends CommonMethods {
@@ -21,6 +20,7 @@ public class ActiveEmployees extends CommonMethods {
         sendText(adminPass, activeEmpPage.passwordField);
         click(activeEmpPage.loginButton);
     }
+
     @Given("admin is on the PIM page")
     public void adminIsOnThePIMPage() {
         click(activeEmpPage.viewPIM);
@@ -41,8 +41,8 @@ public class ActiveEmployees extends CommonMethods {
 
     @When("admin stores active employees on a list or a table")
     public void adminStoresActiveEmployeesOnAListOrATable() {
-        List<WebElement> allActiveEmp =  driver.findElements(By.xpath("//tbody"));
-        for (WebElement activeEmp: allActiveEmp){
+        List<WebElement> allActiveEmp = driver.findElements(By.xpath("//tbody"));
+        for (WebElement activeEmp : allActiveEmp) {
             String nameOfActiveEmp = activeEmp.getText();
             System.out.println(nameOfActiveEmp);
         }

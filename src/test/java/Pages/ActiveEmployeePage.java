@@ -6,23 +6,23 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
 public class ActiveEmployeePage extends CommonMethods {
-    @FindBy(xpath="//*[@id='txtUsername']")
+    @FindBy(xpath = "//*[@id='txtUsername']")
     public WebElement usernameField;
-    @FindBy(id="txtPassword")
+    @FindBy(id = "txtPassword")
     public WebElement passwordField;
-    @FindBy(id="btnLogin")
+    @FindBy(id = "btnLogin")
     public WebElement loginButton;
-    @FindBy(id="menu_pim_viewEmployeeList")
+    @FindBy(id = "menu_pim_viewEmployeeList")
     public WebElement viewEmpList;
-    @FindBy(id="menu_pim_viewPimModule")
+    @FindBy(id = "menu_pim_viewPimModule")
     public WebElement viewPIM;
-    @FindBy(xpath="//select[@id='empsearch_employee_status']")
+    @FindBy(xpath = "//select[@id='empsearch_employee_status']")
     public WebElement empStatusDropDown;
-    @FindBy(xpath="//option[@value='17']")
+    @FindBy(xpath = "//option[@value='17']")
     public WebElement selectActiveEmp;
-    @FindBy(xpath="//input[@id='searchBtn']")
+    @FindBy(xpath = "//input[@id='searchBtn']")
     public WebElement searchBtn;
-    @FindBy(xpath="//tbody")
+    @FindBy(xpath = "//tbody")
     public WebElement activeEmpList;
 
     public ActiveEmployeePage() {

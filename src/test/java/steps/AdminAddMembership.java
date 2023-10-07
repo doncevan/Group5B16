@@ -1,20 +1,12 @@
 package steps;
 
-import Pages.AdminQualificationMembershipPage;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
-
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import utils.CommonMethods;
-import utils.Log;
 
 public class AdminAddMembership extends CommonMethods {
 
@@ -35,7 +27,7 @@ public class AdminAddMembership extends CommonMethods {
         CommonMethods.click(adminMemPage.addMembershipBtn);
         String addBtnText = adminMemPage.addMembershipBtn.getCssValue("value");
         System.out.print(addBtnText);
-    //    Assert.assertEquals("Add", addBtnText);
+        //    Assert.assertEquals("Add", addBtnText);
     }
 
     @Then("admin user can add any {string}")
@@ -50,15 +42,12 @@ public class AdminAddMembership extends CommonMethods {
         System.out.print(actualMembershipName);
         Thread.sleep(2000);
         WebElement checkBox = CommonMethods.returnCheckBoxByStringVSWebTableRowOrColumn(actualMembershipName, adminMemPage.membershipTableNames, adminMemPage.membershipTableCheckBoxs);
-        if(checkBox!=null){
+        if (checkBox != null) {
             waitForClickability(checkBox);
             checkBox.click();
             adminMemPage.deleteMembershipBtn.submit();
         }
-
-
         //       Log.info(actualMembershipName);
         Assert.assertEquals(membershipName, actualMembershipName);
     }
-
 }

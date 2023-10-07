@@ -42,7 +42,7 @@ public class CommonMethods extends PageInitializer {
         driver.get(ConfigReader.getPropertyValue("url"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         initializePageObjects();
-        
+
     }
 
     public static void closeBrowser() {
@@ -56,16 +56,16 @@ public class CommonMethods extends PageInitializer {
         element.sendKeys(text);
     }
 
-    public static WebDriverWait getWait(){
+    public static WebDriverWait getWait() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         return wait;
     }
 
-    public static void waitForClickability(WebElement element){
+    public static void waitForClickability(WebElement element) {
         getWait().until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public static void click(WebElement element){
+    public static void click(WebElement element) {
         waitForClickability(element);
         element.click();
     }
@@ -88,68 +88,68 @@ public class CommonMethods extends PageInitializer {
         sel.selectByValue(value);
     }
 
-    public static byte[] takeScreenshot(String fileName){
+    public static byte[] takeScreenshot(String fileName) {
         TakesScreenshot ts = (TakesScreenshot) driver;
         //we write this line because cucumber accepts array of byte for screenshot
         byte[] picBytes = ts.getScreenshotAs(OutputType.BYTES);
         File screenShot = ts.getScreenshotAs(OutputType.FILE);
         //in case if it doesn't find file name or path it will throw an exception
 
-        try{
+        try {
             FileUtils.copyFile(screenShot,
-                    new File(Constants.SCREENSHOT_FILEPATH + fileName+" "
-                            +getTimeStamp("yyyy-MM-dd-HH-mm-ss")+".png"));
-        }catch (IOException e){
+                    new File(Constants.SCREENSHOT_FILEPATH + fileName + " "
+                            + getTimeStamp("yyyy-MM-dd-HH-mm-ss") + ".png"));
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return picBytes;
     }
 
-    public static String getTimeStamp(String pattern){
+    public static String getTimeStamp(String pattern) {
         //it returns the current date and time in java
         Date date = new Date();
-        //this fubction sdf used to format the date as per the pattern we are passing
+        //this function sdf used to format the date as per the pattern we are passing
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
-        //this line returns the formated data
+        //this line returns the formatted data
         return sdf.format(date);
     }
 
-    public static String validateStringInsideWebTableOrColumn(String expectedString, List<WebElement> webList){
-         String actualString = "";
-       for(WebElement strings : webList){
-           String string =  strings.getText();
-           if(string.equals(expectedString)){
-               return string;
-           } else{ continue; }
-       }
-       return actualString;
+    public static String validateStringInsideWebTableOrColumn(String expectedString, List<WebElement> webList) {
+        String actualString = "";
+        for (WebElement strings : webList) {
+            String string = strings.getText();
+            if (string.equals(expectedString)) {
+                return string;
+            } else {
+                continue;
+            }
+        }
+        return actualString;
     }
 
-    public static int getIndexOfStringInsideWebTableOrColumn(String expectedString, List<WebElement> webList){
+    public static int getIndexOfStringInsideWebTableOrColumn(String expectedString, List<WebElement> webList) {
         int num = 0;
-        for(WebElement strings : webList){
-            String string =  strings.getText();
-            if(string.equals(expectedString)){
-               return webList.indexOf(strings);
-            } else{ continue; }
+        for (WebElement strings : webList) {
+            String string = strings.getText();
+            if (string.equals(expectedString)) {
+                return webList.indexOf(strings);
+            } else {
+                continue;
+            }
         }
         return num;
     }
 
-    public static WebElement returnCheckBoxByStringVSWebTableRowOrColumn(String expectedString, List<WebElement> stringColumn, List<WebElement> checkBoxColumn){
+    public static WebElement returnCheckBoxByStringVSWebTableRowOrColumn(String expectedString, List<WebElement> stringColumn, List<WebElement> checkBoxColumn) {
         WebElement checkBox = null;
 
-        for(int index =0; index<stringColumn.size(); index++){
+        for (int index = 0; index < stringColumn.size(); index++) {
             String string = stringColumn.get(index).getText();
-            if(expectedString.equals(string)){
-                 checkBox = checkBoxColumn.get(index);
+            if (expectedString.equals(string)) {
+                checkBox = checkBoxColumn.get(index);
                 return checkBox;
-
             }
         }
-       return null;
+        return null;
     }
-
-
-
 }

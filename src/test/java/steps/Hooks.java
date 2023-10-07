@@ -7,21 +7,20 @@ import utils.CommonMethods;
 
 public class Hooks extends CommonMethods {
     @Before
-    public  void start() {
+    public void start() {
         openBrowserAndNavigateToURL();
     }
+
     @After
     public void end(Scenario scenario) throws InterruptedException {
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
         byte[] pic;
-        if(scenario.isFailed()) {
+        if (scenario.isFailed()) {
             pic = takeScreenshot("failed/" + scenario.getName());
-        }else {
-            pic=takeScreenshot("passed/" +scenario.getName());
+        } else {
+            pic = takeScreenshot("passed/" + scenario.getName());
         }
-        scenario.attach(pic,"image/png",scenario.getName());
-
+        scenario.attach(pic, "image/png", scenario.getName());
         closeBrowser();
     }
-
 }

@@ -14,12 +14,10 @@ Feature: Employee can manage the dependents in the HRMS application
     Then user click on Add button
     Then the user enters "<Name>" and "<Relationship>" and "<DateofBirth>" in data driven format
     Examples:
-      | Name         | Relationship | DateofBirth   |
-      | John Doe     | Other        | 1990-05-15    |
-      | Jane Smith   | Child        | 2010-10-08    |
-      | John Doe Jr. | Child        | 2015-02-20    |
-
-
+      | Name         | Relationship | DateofBirth |
+      | John Doe     | Other        | 1990-05-15  |
+      | Jane Smith   | Child        | 2010-10-08  |
+      | John Doe Jr. | Child        | 2015-02-20  |
 
 
   @Aya @dependent
@@ -29,9 +27,9 @@ Feature: Employee can manage the dependents in the HRMS application
     Then the HRMS application displays error messages
 
     Examples:
-      | Name         | DateofBirth   | Error   |
+      | Name   | DateofBirth | Error    |
 
-      | Helene       | 1990-05-15    | Required|
+      | Helene | 1990-05-15  | Required |
 
 
   @dependent @Aya

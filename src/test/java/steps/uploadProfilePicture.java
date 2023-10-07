@@ -44,6 +44,5 @@ public class uploadProfilePicture extends CommonMethods {
         sendText(essUserName, loginPage.usernameField);
         sendText(essPassWord, loginPage.passwordField);
         click(loginPage.loginButton);
-
     }
 }

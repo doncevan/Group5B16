@@ -4,7 +4,7 @@ Feature: Admin terminates employment
     #Given admin user is navigated to HRMS website
     When admin enters valid username and password
     And admin clicks on login button
-    Then admin is successfuly logged in the application
+    Then admin is successfully logged in the application
     #Given admin is navigated to employee information
     When  admin clicks on PIM and employee list option
 
@@ -17,8 +17,6 @@ Feature: Admin terminates employment
 
     Examples:
       | id     |
-      | 90839A |
-      | 90841A |
-      | 90842A |
-
-
+      | 88082A |
+      | 88102A |
+      | 88140A |

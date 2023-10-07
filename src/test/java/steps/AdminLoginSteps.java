@@ -1,7 +1,6 @@
 package steps;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
@@ -9,13 +8,9 @@ import utils.ConfigReader;
 import utils.Log;
 
 public class AdminLoginSteps extends CommonMethods {
-//    @Given("admin is navigated to the HRMS website")
-//    public void adminIsNavigatedToTheHRMSWebsite() throws InterruptedException{
-//        openBrowserAndNavigateToURL();
-//    }
 
     @When("admin enters valid username and password")
-    public void adminEntersValidUsernameAndPassword() throws InterruptedException{
+    public void adminEntersValidUsernameAndPassword() throws InterruptedException {
         sendText(ConfigReader.getPropertyValue("adminusername"), loginPage.usernameField);
         Log.info("Admin's username has been entered");
         sendText(ConfigReader.getPropertyValue("adminpassword"), loginPage.passwordField);
@@ -25,11 +20,10 @@ public class AdminLoginSteps extends CommonMethods {
     @And("admin clicks on login button")
     public void adminClicksOnLoginButton() {
         click(loginPage.loginButton);
-
     }
 
-    @Then("admin is successfuly logged in the application")
-    public void adminIsSuccessfulyLoggedInTheApplication() throws InterruptedException{
+    @Then("admin is successfully logged in the application")
+    public void adminIsSuccessfullyLoggedInTheApplication() throws InterruptedException {
         System.out.println("Admin has successfully loged into application");
     }
 }
