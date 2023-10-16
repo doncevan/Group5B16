@@ -5,34 +5,33 @@ import org.apache.logging.log4j.Logger;
 
 public class Log {
 
+    // Initialize Log4j logs
+
     private static final Logger Log = LogManager.getLogger(Log.class);
+
+    // This is to print log for the beginning of the test case, as we usually run so many test cases as a test suite
 
     public static void startTestCase(String sTestCaseName) {
 
-        Log.info("**");
-
-        Log.info("**");
+        Log.info("****************************************************************************************");
 
         Log.info("$$$$$$$$$$$$$$$$$$$$$                 " + sTestCaseName + "       $$$$$$$$$$$$$$$$$$$$$$$$$");
 
-        Log.info("**");
-
-        Log.info("**");
+        Log.info("****************************************************************************************");
 
     }
 
-    public static void endTestCase(String sTestCaseName) {
+    //This is to print log for the ending of the test case
 
-        Log.info("Elenaproblemsolutionstatementclassesfocusqueryresolutionhoperegretinstructorcrying             " + "-E---N---D-" + "             XXXXXXXXXXXXXXXXXXXXXX");
+    public static void endTestCase(String eTestCaseName) {
+        Log.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
-        Log.info("Chaymae");
+        Log.info("################            " + eTestCaseName + "             #################");
 
-        Log.info("Chaymae");
-
-        Log.info("Chaymae");
-
-        Log.info("Chaymae");
+        Log.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     }
+
+    // Need to create these methods, so that they can be called
 
     public static void info(String message) {
         Log.info(message);

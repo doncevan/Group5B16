@@ -15,8 +15,8 @@ public class EmployeeContactDetailSteps extends CommonMethods {
 
     @When("user enters valid ess username and password")
     public void userEntersValidEssUsernameAndPassword() {
-        //DOMConfigurator.configure("log4j.xml");
-        Configurator.initialize(null, "log4j.xml");
+        //DOMConfigurator.configure("log4j2.xml");
+        Configurator.initialize(null, "log4j2.xml");
         Log.startTestCase("My project test case starts here");
         sendText(ConfigReader.getPropertyValue("essusername"), loginPage.usernameField);
         sendText(ConfigReader.getPropertyValue("esspassword"), loginPage.passwordField);
