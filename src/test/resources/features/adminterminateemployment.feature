@@ -16,7 +16,7 @@ Feature: Admin terminates employment
     Then validate employee terminated
 
     Examples:
-      | id     |
-      | 90964A |
-      | 90969A |
-      | 90972A |
+      | id       |
+      | 29930950 |
+      | 31302531 |
+      | 87807A   |

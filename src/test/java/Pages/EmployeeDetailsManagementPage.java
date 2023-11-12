@@ -62,7 +62,7 @@ public class EmployeeDetailsManagementPage extends CommonMethods {
     @FindBy(id = "btnSaveMembership")
     public WebElement saveButton;
 
-    @FindBy(xpath = "//a[normalize-space()='Amazon']")
+    @FindBy(xpath = "//a[normalize-space()='Apple']")
     public WebElement pickAccount;
 
     @FindBy(xpath = "//*[@id='frmEmpDelMemberships']/table/tbody/tr[2]/td[1]/input")
