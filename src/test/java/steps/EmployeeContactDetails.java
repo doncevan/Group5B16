@@ -18,7 +18,7 @@ public class EmployeeContactDetails extends CommonMethods {
 
     @When("employee enters valid username and password")
     public void employeeEntersValidUsernameAndPassword() {
-        Configurator.initialize(null, "log4j2.xml");
+        Configurator.initialize(null, "testData/log4j2.xml");
         Log.startTestCase("The employee's contact details update test case starts here");
         sendText(ConfigReader.getPropertyValue("essusername"), loginPage.usernameField);
         Log.info("Username has been entered");

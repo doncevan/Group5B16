@@ -20,7 +20,7 @@ public class EmployeeMembershipManagement extends CommonMethods {
     @When("the employee enters valid ess username and password")
     public void theEmployeeEntersValidEssUsernameAndPassword() {
         // DOMConfigurator.configure("log4j2.xml");
-        Configurator.initialize(null, "log4j2.xml");
+        Configurator.initialize(null, "testData/log4j2.xml");
         Log.startTestCase("My employee membership management test case starts here");
         sendText(ConfigReader.getPropertyValue("essusername"), loginPage.usernameField);
         Log.info("My username has been entered");
