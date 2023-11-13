@@ -21,7 +21,7 @@ Feature: Employee Membership Management
     And the system should store the membership details in the employee's profile
     Examples:
       | Membership | SubscriptionPaidBy | SubscriptionAmount | Currency             | SubscriptionCommenceDate | SubscriptionRenewalDate |
-      | Apple    | Company            | 50                 | United States Dollar | 2023-07-15               | 2024-07-15              |
+      | Apple      | Company            | 50                 | United States Dollar | 2023-07-15               | 2024-07-15              |
 
   @membership
   Scenario Outline: Edit previously saved membership details
