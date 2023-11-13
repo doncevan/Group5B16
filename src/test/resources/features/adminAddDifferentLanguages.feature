@@ -1,4 +1,4 @@
-Feature:
+Feature: Admin add languages
 
   @languages
   Scenario: Admin add different languages to employees

@@ -53,10 +53,10 @@ public class EmployeeDetailsManagementPage extends CommonMethods {
     @FindBy(id = "membership_currency")
     public WebElement currencyDropdown;
 
-    @FindBy(id = "membership_subscriptionCommenceDate")
+    @FindBy(xpath = "//input[@id='membership_subscriptionCommenceDate']")
     public WebElement commenceDateField;
 
-    @FindBy(id = "membership_subscriptionRenewalDate")
+    @FindBy(xpath = "//input[@id='membership_subscriptionRenewalDate']")
     public WebElement renewalDateField;
 
     @FindBy(id = "btnSaveMembership")

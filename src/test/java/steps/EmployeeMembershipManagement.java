@@ -66,11 +66,11 @@ public class EmployeeMembershipManagement extends CommonMethods {
 
         Select currencySelect = new Select(employeeDetailsManagementPage.currencyDropdown);
         currencySelect.selectByVisibleText(Currency);
-        click(employeeDetailsManagementPage.commenceDateField);
-        sendText(SubscriptionCommenceDate, employeeDetailsManagementPage.commenceDateField);
+
         click(employeeDetailsManagementPage.renewalDateField);
         sendText(SubscriptionRenewalDate, employeeDetailsManagementPage.renewalDateField);
-
+        click(employeeDetailsManagementPage.commenceDateField);
+        sendText(SubscriptionCommenceDate, employeeDetailsManagementPage.commenceDateField);
     }
 
     @And("the employee clicks the save button")
@@ -116,12 +116,10 @@ public class EmployeeMembershipManagement extends CommonMethods {
 
         Select currencySelect = new Select(employeeDetailsManagementPage.currencyDropdown);
         currencySelect.selectByVisibleText(Currency);
-
-        click(employeeDetailsManagementPage.commenceDateField);
-        sendText(SubscriptionCommenceDate, employeeDetailsManagementPage.commenceDateField);
         click(employeeDetailsManagementPage.renewalDateField);
         sendText(SubscriptionRenewalDate, employeeDetailsManagementPage.renewalDateField);
-
+        click(employeeDetailsManagementPage.commenceDateField);
+        sendText(SubscriptionCommenceDate, employeeDetailsManagementPage.commenceDateField);
     }
 
     @Then("the system should update the employee's membership details")
