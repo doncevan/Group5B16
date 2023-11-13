@@ -155,7 +155,7 @@ public class AdminAddJobDetailsSteps extends CommonMethods {
     }
 
     @When("admin clicks on Choose file button and uploads information")
-    public void adminClicksOnChooseFileButton() throws IOException {
+    public void adminClicksOnChooseFileButton() throws IOException, InterruptedException {
         adminAddJobDetailsPage.jobContractBtn.sendKeys(CONTRACT_DETAILS_PATH);
     }
 

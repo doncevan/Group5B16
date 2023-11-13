@@ -12,9 +12,9 @@ Feature: Employee can manage the dependents in the HRMS application
   @Aya @dependent
   Scenario Outline: Employee adds dependents
     Then user click on Add button
-    Then the user enters "<Name>" and "<Relationship>" and "<DateofBirth>" in data driven format
+    Then the user enters "<Name>" and "<Relationship>" and "<DateOfBirth>" in data driven format
     Examples:
-      | Name         | Relationship | DateofBirth |
+      | Name         | Relationship | DateOfBirth |
       | John Doe     | Other        | 1990-05-15  |
       | Jane Smith   | Child        | 2010-10-08  |
       | John Doe Jr. | Child        | 2015-02-20  |
@@ -23,11 +23,11 @@ Feature: Employee can manage the dependents in the HRMS application
   @Aya @dependent
   Scenario Outline: the HRMS system should show error message in case of invalid inserts
     Then user click on Add button
-    When user enters invalid information "<Name>" and "<DateofBirth>" and verifying the "<Error>"
+    When user enters invalid information "<Name>" and "<DateOfBirth>" and verifying the "<Error>"
     Then the HRMS application displays error messages
 
     Examples:
-      | Name   | DateofBirth | Error    |
+      | Name   | DateOfBirth | Error    |
 
       | Helene | 1990-05-15  | Required |
 

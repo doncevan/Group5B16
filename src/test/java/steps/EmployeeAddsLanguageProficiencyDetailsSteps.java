@@ -47,7 +47,7 @@ public class EmployeeAddsLanguageProficiencyDetailsSteps extends CommonMethods {
     @And("employee selects language dropdown")
     public void employee_selects_language_dropdown() {
         Select languageSel = new Select(employeeAddsLanguageProficiencyDetailsPage.languageDropdown);
-        languageSel.selectByVisibleText("English");
+        languageSel.selectByVisibleText("Uzbek");
     }
 
     @And("employee selects fluency dropdown")

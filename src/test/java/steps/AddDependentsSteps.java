@@ -68,9 +68,9 @@ public class AddDependentsSteps extends CommonMethods {
     }
 
     @When("user enters invalid information {string} and {string} and verifying the {string}")
-    public void userEntersInvalidInformationAndAndVerifyingThe(String Name, String DateofBirth, String errorMsgExpected) {
+    public void userEntersInvalidInformationAndAndVerifyingThe(String Name, String DateOfBirth, String errorMsgExpected) {
         sendText(Name, addDepPage.addNameTextBox);
-        sendText(DateofBirth, addDepPage.dependentDateOfBirth);
+        sendText(DateOfBirth, addDepPage.dependentDateOfBirth);
         click(addDepPage.dependentSaveBtn);
 
         //validation-error
