@@ -117,10 +117,11 @@ public class EmployeeMembershipManagement extends CommonMethods {
         Select currencySelect = new Select(employeeDetailsManagementPage.currencyDropdown);
         currencySelect.selectByVisibleText(Currency);
 
-        click(employeeDetailsManagementPage.renewalDateField);
-        sendText(SubscriptionRenewalDate, employeeDetailsManagementPage.renewalDateField);
         click(employeeDetailsManagementPage.commenceDateField);
         sendText(SubscriptionCommenceDate, employeeDetailsManagementPage.commenceDateField);
+        click(employeeDetailsManagementPage.renewalDateField);
+        sendText(SubscriptionRenewalDate, employeeDetailsManagementPage.renewalDateField);
+
     }
 
     @Then("the system should update the employee's membership details")
