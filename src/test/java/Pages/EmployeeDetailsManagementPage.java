@@ -56,6 +56,9 @@ public class EmployeeDetailsManagementPage extends CommonMethods {
     @FindBy(xpath = "//input[@id='membership_subscriptionCommenceDate']")
     public WebElement commenceDateField;
 
+    @FindBy(xpath = "//h1[@id='membershipHeading']")
+    public WebElement addMembershipHeading;
+
     @FindBy(xpath = "//input[@id='membership_subscriptionRenewalDate']")
     public WebElement renewalDateField;
 
